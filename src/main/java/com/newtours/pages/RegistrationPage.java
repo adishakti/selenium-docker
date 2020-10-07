@@ -55,5 +55,4 @@ public class RegistrationPage {
     public void submit(){
         this.submitBtn.click();
     }
-
 }

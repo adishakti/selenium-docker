@@ -1,16 +1,20 @@
-package com.newtours.tests;
+package com.planck.tests;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.newtours.pages.*;
 import com.generic.BaseTest;
+import com.newtours.pages.FindFlightPage;
+import com.newtours.pages.FlightConfirmationPage;
+import com.newtours.pages.FlightDetailsPage;
+import com.newtours.pages.RegistrationConfirmationPage;
+import com.planckai.pages.RegistrationPage;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class BookFlightTest extends BaseTest {
+public class RegistrationLogin extends BaseTest {
 
     ExtentReports extentReports;
     ExtentTest extentTest;
@@ -43,34 +47,14 @@ public class BookFlightTest extends BaseTest {
         ExtentTest logger = extentReports.createTest("registration");
         RegistrationPage registrationPage = new RegistrationPage(driver);
         registrationPage.goTo();
-        logger.log(Status.INFO, "go to registration page");
-        registrationPage.enterUserDetails("selenium", "docker");
-        logger.log(Status.INFO, "enter user details");
-        registrationPage.enterUserCredentials("selenium", "docker");
-        logger.log(Status.INFO, "enter user credentials");
-//        String path = takeScreenshot(this.toString());
-//        try{
-//            extentTest.pass("Registration Completed", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-//        } catch (IOException e) {
-//            extentTest.pass("Test passed , Cannot attach screenshot");
-//        }
-        registrationPage.submit();
-        logger.log(Status.INFO, "submit registration details");
-        extentReports.flush();
+        registrationPage.enterUserDetails("Test","Test");
+        registrationPage.validatepopup();
     }
 
     @Test(dependsOnMethods = "registrationPage")
-    public void registrationConfirmationPage() {
-        ExtentTest logger1 = extentReports.createTest("registration confirmation");
+    public void emailConfirmation() {
         RegistrationConfirmationPage registrationConfirmationPage = new RegistrationConfirmationPage(driver);
         registrationConfirmationPage.goToFlightDetailsPage();
-//        String path = takeScreenshot(this.toString());
-//        try{
-//            extentTest.pass("Registration Confirmed", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-//        } catch (IOException e) {
-//            extentTest.pass("Test passed , Cannot attach screenshot");
-//        }
-        logger1.log(Status.INFO, "registration confirmed");
         extentReports.flush();
     }
 
@@ -80,12 +64,6 @@ public class BookFlightTest extends BaseTest {
         FlightDetailsPage flightDetailsPage = new FlightDetailsPage(driver);
         flightDetailsPage.selectPassengers(noOfPassengers);
         flightDetailsPage.goToFindFlightsPage();
-//        String path = takeScreenshot(this.toString());
-//        try{
-//            extentTest.pass("Flight Details page", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-//        } catch (IOException e) {
-//            extentTest.pass("Test passed , Cannot attach screenshot");
-//        }
         logger2.log(Status.INFO, "go to find flights");
         extentReports.flush();
     }
@@ -111,12 +89,6 @@ public class BookFlightTest extends BaseTest {
         } else {
             logger4.fail("Expected and actual flight price is not same");
         }
-//        String path = takeScreenshot(this.toString());
-//        try{
-//            extentTest.pass("flight confirmation page", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-//        } catch (IOException e) {
-//            extentTest.pass("Test passed , Cannot attach screenshot");
-//        }
         extentReports.flush();
     }
 
@@ -124,25 +96,4 @@ public class BookFlightTest extends BaseTest {
     public void flushExtentReport() {
         extentReports.flush();
     }
-
-//    public String takeScreenshot(String methodName) {
-//        String fileName = getScreenshotName(methodName);
-//        String directory = System.getProperty("user.dir") + "/screenshots/";
-//        new File(directory).mkdirs();
-//        String path = directory + fileName;
-//
-//        try {
-//            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//            FileUtils.copyFile(screenshot, new File(path));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return path;
-//    }
-//
-//    public static String getScreenshotName(String methodName) {
-//        Date d = new Date();
-//        String fileName = methodName + "_" + d.toString().replace(" ", "_") + ".png";
-//        return fileName;
-//    }
 }
