@@ -1,4 +1,4 @@
-package com.planckai.pages;
+package com.dltk.pages;
 
 import com.generic.BaseTest;
 import com.generic.ToolUtil;
@@ -9,14 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MailinatorPage extends BaseTest {
-private String mobileNumber;
-private String Emailid;
-private String passwordtxt= "qubitaitesting";
+public class RegistrationPage extends BaseTest {
 
-
-    @FindBy(xpath = "//div[@class='nav-title']")
-    private WebElement mailinatorTxt;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+    private String Emailid;
+    private final String passwordtxt = "qubitaitest";
+    private String mobileNumber;
+    private String activationPopuptxt;
+    private final String expectedPopuptxt ="Your Account Activation email is on its way";
 
 
     @FindBy(xpath = "//div[@class='signup-wrap']/h1")
@@ -49,6 +50,12 @@ private String passwordtxt= "qubitaitesting";
     @FindBy(xpath = "//form[@class='form-activation']")
     private WebElement Activationpopup;
 
+    @FindBy(id = "activation-close")
+    private WebElement Activationpopupclose;
+
+    @FindBy(xpath = "//div[@class='activation-wrap']/p")
+    private WebElement ActivationPopupMessage;
+
     @FindBy(name = "email")
     private WebElement usernameTxt;
 
@@ -61,16 +68,16 @@ private String passwordtxt= "qubitaitesting";
     @FindBy(name = "register")
     private WebElement submitBtn;
 
-    public MailinatorPage(WebDriver driver){
+    public RegistrationPage(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 30);
         PageFactory.initElements(driver, this);
     }
-    public void goTomailinator(){
-        this.driver.get("https://www.mailinator.com/");
-        this.wait.until(ExpectedConditions.visibilityOf(this.mailinatorTxt));
-    }
 
+    public void goTo(){
+        this.driver.get("https://preprod-engine.planck.ai/");
+        this.wait.until(ExpectedConditions.visibilityOf(this.WelcomeMessage));
+    }
 
     public String enterUserDetails(String firstName, String lastName){
         sendKeys(this.firstName,firstName,"First Name");
@@ -88,8 +95,11 @@ private String passwordtxt= "qubitaitesting";
 
     public void validatepopup(){
         this.wait.until(ExpectedConditions.visibilityOf(this.Activationpopup));
-
+        activationPopuptxt=getText(this.ActivationPopupMessage,"Get text from popup message");
+        asserttxt(expectedPopuptxt,activationPopuptxt,"validate expected popup text: "+expectedPopuptxt+" and actual popup text: "+activationPopuptxt);
+        click(Activationpopupclose, "Click on Pop-Up close");
     }
+
 
     public void submit(){
         this.submitBtn.click();

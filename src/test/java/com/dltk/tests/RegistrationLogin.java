@@ -1,16 +1,17 @@
-package com.planck.tests;
+package com.dltk.tests;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.dltk.pages.RegistrationPage;
 import com.generic.BaseTest;
 import com.newtours.pages.FindFlightPage;
 import com.newtours.pages.FlightConfirmationPage;
 import com.newtours.pages.FlightDetailsPage;
 import com.newtours.pages.RegistrationConfirmationPage;
-import com.planckai.pages.RegistrationPage;
+
 import org.testng.Assert;
 import org.testng.annotations.*;
 

@@ -16,8 +16,8 @@ public class ExtentReport {
     public synchronized static ExtentReports getReporter() {
         if (extent == null) {
         	ExtentHtmlReporter html = new ExtentHtmlReporter("QubitAITestingReport.html");
-        	html.config().setDocumentTitle("Planck Framework");
-        	html.config().setReportName("Planck Website Automation");
+        	html.config().setDocumentTitle("DLTK Framework");
+        	html.config().setReportName("DLTK Website Automation");
         	html.config().setTheme(Theme.STANDARD);
             extent = new ExtentReports();
             extent.attachReporter(html);
