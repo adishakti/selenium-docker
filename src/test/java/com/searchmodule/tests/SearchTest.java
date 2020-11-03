@@ -1,7 +1,9 @@
 package com.searchmodule.tests;
 
 import com.searchmodule.pages.SearchPage;
-import com.generic.BaseTest;
+
+import ai.generic.BaseTest;
+
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

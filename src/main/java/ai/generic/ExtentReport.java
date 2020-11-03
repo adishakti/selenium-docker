@@ -1,4 +1,4 @@
-package com.generic;
+package ai.generic;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

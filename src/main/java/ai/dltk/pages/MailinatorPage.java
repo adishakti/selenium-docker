@@ -1,13 +1,14 @@
-package com.dltk.pages;
+package ai.dltk.pages;
 
-import com.generic.BaseTest;
-import com.generic.ToolUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import ai.generic.BaseTest;
+import ai.generic.ToolUtil;
 
 public class MailinatorPage extends BaseTest {
 private String mobileNumber;

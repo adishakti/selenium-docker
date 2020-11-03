@@ -6,7 +6,9 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.newtours.pages.*;
-import com.generic.BaseTest;
+
+import ai.generic.BaseTest;
+
 import org.testng.Assert;
 import org.testng.annotations.*;
 

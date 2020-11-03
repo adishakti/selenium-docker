@@ -1,13 +1,14 @@
-package com.dltk.pages;
+package ai.dltk.pages;
 
-import com.generic.BaseTest;
-import com.generic.ToolUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import ai.generic.BaseTest;
+import ai.generic.ToolUtil;
 
 public class RegistrationPage extends BaseTest {
 
@@ -20,7 +21,7 @@ public class RegistrationPage extends BaseTest {
     private final String expectedPopuptxt ="Your Account Activation email is on its way";
 
 
-    @FindBy(xpath = "//div[@class='signup-wrap']/h1")
+    @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']") 
     private WebElement WelcomeMessage;
 
     @FindBy(id = "id_firstname")
@@ -75,7 +76,8 @@ public class RegistrationPage extends BaseTest {
     }
 
     public void goTo(){
-        this.driver.get("https://preprod-engine.planck.ai/");
+        this.driver.get("https://dltk.ai/");
+        driver.manage().window().maximize();
         this.wait.until(ExpectedConditions.visibilityOf(this.WelcomeMessage));
     }
 
