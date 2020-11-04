@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ai.generic.BaseTest;
 
-public class LoginPage extends BaseTest {
+public class UseCasePage extends BaseTest{
 
 
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']") 
@@ -46,7 +46,7 @@ public class LoginPage extends BaseTest {
     private WebElement DevSigninButton;
     
 
-    public LoginPage(WebDriver driver){
+    public UseCasePage(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 30);
         PageFactory.initElements(driver, this);
@@ -76,4 +76,8 @@ public class LoginPage extends BaseTest {
     	sendKeys(DevPass, devPassword, "dev Password");
     	click(DevSigninButton, "Dev Signin Button");
     }
+
+
+
+
 }

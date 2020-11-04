@@ -73,6 +73,14 @@ public class BaseTest {
         utils.log().info(msg + txt);
         return txt;
     }
+    
+    public void switchToWindow() {
+    for (String Winhandle : driver.getWindowHandles()) 
+    	{
+		driver.switchTo().window(Winhandle);
+		}
+    }
+    
     public void closeChatBOt(WebElement iframe,WebElement e) {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iframe));
 		e.click();

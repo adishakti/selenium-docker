@@ -12,17 +12,8 @@ public class LoginTest extends BaseTest {
     @Test
     @Parameters({"username","password"})
     public void userlogin(@Optional("Abc") String username, String password) {
-        //ExtentTest logger = extentReports.createTest("registration");
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         loginPage.login(username,password);
     }
-    
-    @Test
-    public void developerAccess() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.goTo();
-        
-    }
-
 }
