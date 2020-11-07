@@ -24,26 +24,56 @@ public class UseCasePage extends BaseTest{
     @FindBy(xpath = "//input[@id='shortcode-login-submit']") 
     private WebElement loginButton;
     
-    @FindBy(xpath = "//a[@href='http://developer.dltk.ai'][@class='elementor-button-link elementor-button elementor-size-md']") 
-    private WebElement developerAccess;
-    
     @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]")
     private WebElement iframe;
     
     @FindBy(xpath = "//div[@aria-label='close']")
     private WebElement close;
     
-    @FindBy(xpath = "//a[text()='Sign In']") 
-    private WebElement DevSigninlink;
+    @FindBy(xpath = "//li[@id='menu-item-5141']") 
+    private WebElement OpenSource;
     
-    @FindBy(xpath = "//input[@id='i2']") 
-    private WebElement DevUser;
+  //a[@href='#'][text()='Open Source']
     
-    @FindBy(xpath = "//input[@id='i4']") 
-    private WebElement DevPass;
+    @FindBy(xpath = "//li[@id='menu-item-6022']") 
+  //a[text()='Use Cases']
+    private WebElement UseCases;
     
-    @FindBy(xpath = "//button[@id='signin-btn']") 
-    private WebElement DevSigninButton;
+    @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]") 
+    private WebElement Iframe;
+
+    @FindBy(xpath = "//div[@aria-label='close") 
+    private WebElement Close;
+    
+    @FindBy(xpath = "//a[contains(text(),'Predict Age and Gender using Convolutional Neural ')]") 
+    private WebElement PredictAgeGender;
+    
+    @FindBy(xpath = "//span[@class='listFixed active']") 
+    private WebElement Introduction;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][text()='Problem Statement']") 
+    private WebElement ProblemStatement;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][text()='Architecture']") 
+    private WebElement Architecture;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][text()='Explanation']") 
+    private WebElement Explanation;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][text()='Outputs']") 
+    private WebElement Outputs;
+    
+    
+    @FindBy(xpath = "//a[contains(text(),'Predict Electricity Consumption using Time Series ')]") 
+    private WebElement PredictElectricity;
+    
+  
+    @FindBy(xpath = "//a[contains(text(),'Demystify DNA Sequencing with Machine Learning and')]") 
+    private WebElement DNASequencing ;
+    
+    
+    @FindBy(xpath = "//a[contains(text(),'Text Classification Quora')]") 
+    private WebElement  quora;
     
 
     public UseCasePage(WebDriver driver){
@@ -65,19 +95,90 @@ public class UseCasePage extends BaseTest{
         click(loginButton, "Login Button");
     }
     
-    public void developerAccess(){
-        click(developerAccess, "developer Access");
-        switchToWindow();
+    public void PredictAgeGender(){
+    	try {
+  			Thread.sleep(2000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	submenuelement(OpenSource, UseCases);
+    	try {
+  			Thread.sleep(4000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+	    click(PredictAgeGender, "PredictAgeGender");
+        click(Introduction, "Introduction");
+        click(ProblemStatement, "ProblemStatement");
+        click(Architecture, "Architecture");
+        click(Explanation, "Explanation");
+        click(Outputs, "Outputs");
     }
-    
-    public void developerLogin(String devUsername, String devPassword){
-    	click(DevSigninlink, "Dev Signin link");
-    	sendKeys(DevUser, devUsername, "dev Username");
-    	sendKeys(DevPass, devPassword, "dev Password");
-    	click(DevSigninButton, "Dev Signin Button");
+    public void PredictElectricity(){
+    	try {
+  			Thread.sleep(2000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	submenuelement(OpenSource, UseCases);
+    	try {
+  			Thread.sleep(3000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+	    click(PredictElectricity, "PredictElectricity");
+        click(Introduction, "Introduction");
+        click(ProblemStatement, "ProblemStatement");
+        click(Architecture, "Architecture");
+        click(Explanation, "Explanation");
+        click(Outputs, "Outputs");
     }
-
-
-
-
+        
+     public void DNASequencing(){
+    	 try {
+   			Thread.sleep(2000);
+   		} catch (InterruptedException e) {
+   			// TODO Auto-generated catch block
+   			e.printStackTrace();
+   		}
+     	submenuelement(OpenSource, UseCases);
+     	try {
+   			Thread.sleep(3000);
+   		} catch (InterruptedException e) {
+   			// TODO Auto-generated catch block
+   			e.printStackTrace();
+   		}
+	    click(DNASequencing, "DNASequencing");
+        click(Introduction, "Introduction");
+        click(ProblemStatement, "ProblemStatement");
+         click(Architecture, "Architecture");
+         click(Explanation, "Explanation");
+         click(Outputs, "Outputs");
+     }
+      public void quora(){
+    	  try {
+    			Thread.sleep(2000);
+    		} catch (InterruptedException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+      	submenuelement(OpenSource, UseCases);
+      	try {
+    			Thread.sleep(4000);
+    		} catch (InterruptedException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+     	 click(quora, "Dquora");
+        click(Introduction, "Introduction");
+        click(ProblemStatement, "ProblemStatement");
+        click(Architecture, "Architecture");
+	         click(Explanation, "Explanation");
+        click(Outputs, "Outputs");
+	            
+      }
 }

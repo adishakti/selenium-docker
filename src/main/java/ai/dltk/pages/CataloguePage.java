@@ -24,26 +24,46 @@ public class CataloguePage extends BaseTest{
     @FindBy(xpath = "//input[@id='shortcode-login-submit']") 
     private WebElement loginButton;
     
-    @FindBy(xpath = "//a[@href='http://developer.dltk.ai'][@class='elementor-button-link elementor-button elementor-size-md']") 
-    private WebElement developerAccess;
-    
     @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]")
     private WebElement iframe;
     
     @FindBy(xpath = "//div[@aria-label='close']")
     private WebElement close;
     
-    @FindBy(xpath = "//a[text()='Sign In']") 
-    private WebElement DevSigninlink;
     
-    @FindBy(xpath = "//input[@id='i2']") 
-    private WebElement DevUser;
     
-    @FindBy(xpath = "//input[@id='i4']") 
-    private WebElement DevPass;
+    @FindBy(xpath = "//li[@id='menu-item-5141']//a[@href='#'][normalize-space()='Open Source']") 
+    private WebElement OpenSource;
     
-    @FindBy(xpath = "//button[@id='signin-btn']") 
-    private WebElement DevSigninButton;
+    @FindBy(xpath= "//li[@id='menu-item-5141']/div/ul/li[1]/a") 
+    private WebElement Catalogue;
+    
+    @FindBy(xpath = "//li[@id='menu-item-5922']//a[normalize-space()='Machine Learning']") 
+    private WebElement MachineLearning;
+    
+    @FindBy(xpath = "//span[@class='listFixed active']") 
+    private WebElement Overview;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][normalize-space()=\"Beginner's Guide\"]") 
+    private WebElement BeginnerGuide;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][normalize-space()='Quickstart']")
+    private WebElement Quickstart;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][normalize-space()='APIs']")
+    private WebElement APIs;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][normalize-space()='SDK']") 
+    private WebElement SDK;
+    
+    @FindBy(xpath = "//span[@class='listFixed'][normalize-space()='Release Notes']") 
+    private WebElement ReleaseNotes;
+    
+    @FindBy(xpath = "//li[@id='menu-item-5966']//a[normalize-space()='Natural Language Processing']") 
+    private WebElement NaturalLanguageProcessing;
+    
+    @FindBy(xpath = "//li[@id='menu-item-5995']//a[normalize-space()='Computer Vision']") 
+    private WebElement ComputerVision;
     
 
     public CataloguePage(WebDriver driver){
@@ -65,17 +85,69 @@ public class CataloguePage extends BaseTest{
         click(loginButton, "Login Button");
     }
     
-    public void developerAccess(){
-        click(developerAccess, "developer Access");
-        switchToWindow();
+    public void MachineLearning(){
+    	try {
+  			Thread.sleep(2000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	cataloguesubmenu(OpenSource, Catalogue, MachineLearning);
+    	try {
+  			Thread.sleep(4000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+        click(Overview, "Overview");
+        click(BeginnerGuide, "BeginnerGuide");
+        click(Quickstart, "Quickstart");
+        click(APIs, "APIs");
+        click(SDK, "SDK");
+        click(ReleaseNotes, "ReleaseNotes");
     }
-    
-    public void developerLogin(String devUsername, String devPassword){
-    	click(DevSigninlink, "Dev Signin link");
-    	sendKeys(DevUser, devUsername, "dev Username");
-    	sendKeys(DevPass, devPassword, "dev Password");
-    	click(DevSigninButton, "Dev Signin Button");
+        
+    public void NaturalLanguageProcessing(){
+    	try {
+  			Thread.sleep(2000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+    	cataloguesubmenu(OpenSource, Catalogue, NaturalLanguageProcessing);
+    	try {
+  			Thread.sleep(3000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+        click(Overview, "Overview");
+        click(BeginnerGuide, "BeginnerGuide");
+        click(Quickstart, "Quickstart");
+        click(APIs, "APIs");
+        click(SDK, "SDK");
+        click(ReleaseNotes, "ReleaseNotes");
     }
-
-
+             
+    public void ComputerVision(){
+    	try {
+  			Thread.sleep(2000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+        cataloguesubmenu(OpenSource, Catalogue, ComputerVision);
+        try {
+  			Thread.sleep(3000);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+        click(Overview, "Overview");
+        click(BeginnerGuide, "BeginnerGuide");
+        click(Quickstart, "Quickstart");
+        click(APIs, "APIs");
+        click(SDK, "SDK");
+        click(ReleaseNotes, "ReleaseNotes");
+    }
 }

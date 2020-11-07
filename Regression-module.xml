@@ -1,0 +1,156 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression-module">
+<listeners>
+<listener class-name="ai.generic.TestListener"></listener>
+</listeners>
+    <test name="LoginTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.LoginTest" />
+        </classes>
+    </test>
+    <test name="DevLoginTest">
+        <parameter name="devUser" value="shakeel@qubitai.tech" />
+        <parameter name="devPassword" value="qwerty" />
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.DevLoginTest" />
+        </classes>
+    </test>
+   <test name="CommunityAITest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityAITest" />
+        </classes>
+    </test>
+    <test name="CommunityAugmentedRealityTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityAugmentedRealityTest" />
+        </classes>
+    </test>
+   <test name="CommunityBlockchainTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityBlockchainTest" />
+        </classes>
+    </test>
+       <test name="CommunityCVTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityCVTest" />
+        </classes>
+    </test>
+    <test name="CommunityDeepLearningTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityDeepLearningTest" />
+        </classes>
+    </test>
+    <test name="CommunityDronesTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityDronesTest" />
+        </classes>
+    </test>
+    <test name="CommunityIOTTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityIOTTest" />
+        </classes>
+    </test>
+    <test name="CommunityJobsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityJobsTest" />
+        </classes>
+    </test>
+    <test name="CommunityMLTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityMLTest" />
+        </classes>
+    </test>
+   <test name="CommunityNLPTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityNLPTest" />
+        </classes>
+    </test>
+   <test name="CommunityQuantumComputingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityQuantumComputingTest" />
+        </classes>
+    </test>
+     <test name="CommunityRoboticsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityRoboticsTest" />
+        </classes>
+    </test> 
+    <test name="CatalogueCVTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CatalogueCVTest" />
+        </classes>
+    </test>
+    <test name="CatalogueMLTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CatalogueMLTest" />
+        </classes>
+    </test>
+    <test name="CatalogueNLPTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CatalogueNLPTest" />
+        </classes>
+    </test>
+
+      <test name="UseCasePredictAgeGenderTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.UseCasePredictAgeGenderTest" />
+        </classes>
+    </test> 
+  		<test name="UseCaseDNASequencingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.UseCaseDNASequencingTest" />
+        </classes>
+    </test>
+   <test name="UseCasePredictElectricityTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.UseCasePredictElectricityTest" />
+        </classes>
+    </test>
+   <test name="UseCaseQuoraTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.UseCaseQuoraTest" />
+        </classes>
+    </test>
+</suite>

@@ -10,12 +10,13 @@ import ai.generic.BaseTest;
 public class DevLoginTest extends BaseTest{
 	
 	 @Test
-	    @Parameters({"devUser","devPassword"})
-	    public void devlogin(@Optional("Abc") String username, String password) {
+	    @Parameters({"devUser","devPassword","username","password"})
+	    public void devlogin(@Optional("Abc") String devUser, String devPassword,String username, String password) {
 	        LoginPage loginPage = new LoginPage(driver);
 	        loginPage.goTo();
+	        loginPage.login(username,password);
 	        loginPage.developerAccess();
-	        loginPage.developerLogin(username, password);
+	        loginPage.developerLogin(devUser, devPassword);
 	    }
 
 }

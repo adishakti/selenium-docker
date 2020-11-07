@@ -3,8 +3,10 @@ package ai.generic;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -60,6 +62,24 @@ public class BaseTest {
         waitForVisibility(e);
         utils.log().info(msg);
         e.click();
+    }
+    
+    public void scrollto(WebElement e, String msg) {
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", e);
+        waitForVisibility(e);
+    }
+    
+    public void cataloguesubmenu(WebElement menu,WebElement submenu,WebElement e) {
+    	Actions action = new Actions(driver);
+        action.moveToElement(menu).perform();
+        action.moveToElement(submenu).perform();
+        action.moveToElement(e).click().perform();
+    }
+    
+    public void submenuelement(WebElement menu,WebElement e) {
+    	Actions action = new Actions(driver);
+        action.moveToElement(menu).perform();
+        action.moveToElement(e).click().perform();
     }
 
     public void asserttxt(String expected, String actual,String msg) {
