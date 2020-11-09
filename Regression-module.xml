@@ -10,7 +10,7 @@
             <class name="ai.dltk.tests.LoginTest" />
         </classes>
     </test>
-    <test name="DevLoginTest">
+   <!--  <test name="DevLoginTest">
         <parameter name="devUser" value="shakeel@qubitai.tech" />
         <parameter name="devPassword" value="qwerty" />
         <parameter name="username" value="aditya@qubitai.tech" />
@@ -152,5 +152,5 @@
         <classes>
             <class name="ai.dltk.tests.UseCaseQuoraTest" />
         </classes>
-    </test>
+    </test> -->
 </suite>

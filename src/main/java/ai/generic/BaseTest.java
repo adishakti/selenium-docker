@@ -16,6 +16,8 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.Status;
+
 public class BaseTest {
     ToolUtil utils = new ToolUtil();
     public WebDriver driver;
@@ -52,6 +54,7 @@ public class BaseTest {
     public void sendKeys(WebElement e, String txt, String msg) {
         waitForVisibility(e);
         utils.log().info(msg);
+        //ExtentReport.getTest().log(Status.INFO, msg);
         e.sendKeys(txt);
     }
     public void waitForVisibility(WebElement e) {
@@ -61,6 +64,7 @@ public class BaseTest {
     public void click(WebElement e, String msg) {
         waitForVisibility(e);
         utils.log().info(msg);
+        //ExtentReport.getTest().log(Status.INFO, msg);
         e.click();
     }
     
@@ -69,28 +73,39 @@ public class BaseTest {
         waitForVisibility(e);
     }
     
-    public void cataloguesubmenu(WebElement menu,WebElement submenu,WebElement e) {
+    public void cataloguesubmenu(WebElement menu,WebElement submenu,WebElement e,String msg) {
     	Actions action = new Actions(driver);
         action.moveToElement(menu).perform();
         action.moveToElement(submenu).perform();
         action.moveToElement(e).click().perform();
+        //ExtentReport.getTest().log(Status.INFO, msg);
     }
     
-    public void submenuelement(WebElement menu,WebElement e) {
+    public void submenuelement(WebElement menu,WebElement e,String msg) {
     	Actions action = new Actions(driver);
         action.moveToElement(menu).perform();
         action.moveToElement(e).click().perform();
+        //ExtentReport.getTest().log(Status.INFO, msg);
+    }
+    
+    public void submenuexpander(WebElement menu,WebElement e,String msg) {
+    	Actions action = new Actions(driver);
+        action.moveToElement(menu).perform();
+        action.moveToElement(e).click().perform();
+        //ExtentReport.getTest().log(Status.INFO, msg);
     }
 
     public void asserttxt(String expected, String actual,String msg) {
         Assert.assertEquals(actual, expected);
         utils.log().info(msg);
+        //ExtentReport.getTest().log(Status.INFO, msg);
     }
 
     public String getText(WebElement e, String msg) {
         waitForVisibility(e);
         String txt = e.getText();
         utils.log().info(msg + txt);
+        //ExtentReport.getTest().log(Status.INFO, msg);
         return txt;
     }
     
@@ -101,9 +116,10 @@ public class BaseTest {
 		}
     }
     
-    public void closeChatBOt(WebElement iframe,WebElement e) {
+    public void closeChatBOt(WebElement iframe,WebElement e, String msg) {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iframe));
 		e.click();
 		driver.switchTo().parentFrame();
+		//ExtentReport.getTest().log(Status.INFO, msg);
     }
 }

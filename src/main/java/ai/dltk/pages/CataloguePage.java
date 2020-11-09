@@ -79,7 +79,7 @@ public class CataloguePage extends BaseTest{
     }
 
     public void login(String userName, String password){
-    	closeChatBOt(iframe, close);
+    	closeChatBOt(iframe, close,"Close Chatbot");
         sendKeys(this.userName,userName,"Username");
         sendKeys(this.password,password,"Password");
         click(loginButton, "Login Button");
@@ -92,7 +92,7 @@ public class CataloguePage extends BaseTest{
   			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
-    	cataloguesubmenu(OpenSource, Catalogue, MachineLearning);
+    	cataloguesubmenu(OpenSource, Catalogue, MachineLearning,"open catalogue submenu-Machine Learning");
     	try {
   			Thread.sleep(4000);
   		} catch (InterruptedException e) {
@@ -114,7 +114,7 @@ public class CataloguePage extends BaseTest{
   			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
-    	cataloguesubmenu(OpenSource, Catalogue, NaturalLanguageProcessing);
+    	cataloguesubmenu(OpenSource, Catalogue, NaturalLanguageProcessing,"open catalogue submenu-NLP");
     	try {
   			Thread.sleep(3000);
   		} catch (InterruptedException e) {
@@ -136,7 +136,7 @@ public class CataloguePage extends BaseTest{
   			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
-        cataloguesubmenu(OpenSource, Catalogue, ComputerVision);
+        cataloguesubmenu(OpenSource, Catalogue, ComputerVision,"open catalogue submenu-CV");
         try {
   			Thread.sleep(3000);
   		} catch (InterruptedException e) {

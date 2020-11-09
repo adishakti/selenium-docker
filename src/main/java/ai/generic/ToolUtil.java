@@ -18,7 +18,7 @@ public class ToolUtil {
     public static final String LAST_YEAR = "last year";
     public static final String WEEK_TO_DATE = "week to date";
     public static final String MONTH_TO_DATE = "month to date";
-    public static final long WAIT = 10;
+    public static final long WAIT = 30;
 
 
 

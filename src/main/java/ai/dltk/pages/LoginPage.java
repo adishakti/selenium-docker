@@ -59,7 +59,7 @@ public class LoginPage extends BaseTest {
     }
 
     public void login(String userName, String password){
-    	closeChatBOt(iframe, close);
+    	closeChatBOt(iframe, close,"Close Chatbot");
         sendKeys(this.userName,userName,"Username");
         sendKeys(this.password,password,"Password");
         click(loginButton, "Login Button");

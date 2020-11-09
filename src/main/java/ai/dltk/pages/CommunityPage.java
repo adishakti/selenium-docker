@@ -25,8 +25,23 @@ public class CommunityPage extends BaseTest {
 	private String QuantumComputingHeader= "Quantum Computing";
 	private String JOBHeader= "Jobs";
 	private String RoboticsHeader= "Robotics";
-
-
+	private String InviteHeader= "Invite";
+	private String DocsHeader= "Docs";
+	private String EventsHeader= "Events";
+	private String MenubuttonHeader= "Menubutton"; 
+	private String MembersHeader= "Members";
+	private String ActivityHeader= "Activity";
+	private String ProfileHeader= "Profile";
+	private String NotificationsHeader= "Notifications";
+	private String MessagesHeader= "MessagesActivity";
+	private String FriendRequestsHeader= "FriendRequests";
+	private String GroupInvitesHeader= "GroupInvites";
+	private String ForumsHeader= "Forums";
+	private String AddaNewPostHeader= "AddaNewPost";
+	private String SettingsHeader= "Settings";
+	private String LogOutHeader= "LogOut";
+	
+	
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']") 
     private WebElement WelcomeMessage;
     
@@ -112,7 +127,63 @@ public class CommunityPage extends BaseTest {
     @FindBy(xpath = "//aside[@class='bp-feedback bp-messages bp-template-notice success']/p") 
     private WebElement LeaveGroupNotification ;
     
+    @FindBy(xpath= "//a[text()='Invite']") 
+    private WebElement invite;
+    
+    @FindBy(xpath= "//a[text()='Docs']") 
+    private WebElement Docs;
+    
+    @FindBy(xpath= "//a[@id='events']") 
+    private WebElement Events;
+    
+    @FindBy(xpath= "//a[@class='object-nav-menu-button-a']") 
+    private WebElement Menubutton; 
+    
+    @FindBy(xpath= "//a[contains(text(),'Members (7,848)')]") 
+    private WebElement Members;
   
+    @FindBy(xpath= "//a[normalize-space()='Activity']") 
+    private WebElement activity;
+    
+    @FindBy(xpath= "//div[@id='user-top-menu-expander']") 
+    private WebElement dropdownmenu;
+    
+    @FindBy(xpath= "//a[normalize-space()='Profile']") 
+    private WebElement profile;
+    
+    @FindBy(xpath= "//a[normalize-space()='Notifications']") 
+    private WebElement notifications;
+    
+    @FindBy(xpath= "//a[normalize-space()='Messages']") 
+    private WebElement messages;
+    
+    @FindBy(xpath= "//a[normalize-space()='Friend Requests']") 
+    private WebElement Friendsrequests;
+    
+    @FindBy(xpath= "//a[normalize-space()='Group Invites']") 
+    private WebElement GroupInvites;
+    
+    @FindBy(xpath="//a[normalize-space()='Add a New Post']")
+    private WebElement AddaNewPost;
+    
+    @FindBy(xpath= "//a[normalize-space()='Forums']") 
+    private WebElement Forums;
+    
+    @FindBy(xpath= "//input[@id='user_login']") 
+    private WebElement userlogin;
+    
+    @FindBy(xpath= "//input[@id='user_pass']") 
+    private WebElement userpass;
+    
+    @FindBy(xpath= "//input[@id='wp-submit']") 
+    private WebElement submit;
+    
+    @FindBy(xpath= "//a[normalize-space()='Settings']") 
+    private WebElement Settings;
+    
+    @FindBy(xpath= "//a[normalize-space()='Log Out']") 
+    private WebElement LogOut;
+     
    public CommunityPage(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 30);
@@ -126,7 +197,7 @@ public class CommunityPage extends BaseTest {
     }
 
     public void login(String userName, String password){
-    	closeChatBOt(iframe, close);
+    	closeChatBOt(iframe, close,"Close Chatbot");
         sendKeys(this.userName,userName,"Username");
         sendKeys(this.password,password,"Password");
         click(loginButton, "Login Button");
@@ -190,7 +261,6 @@ public class CommunityPage extends BaseTest {
     	  try {
   			Thread.sleep(4000);
   		} catch (InterruptedException e) {
-  			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
           click(Blockchain, "Blockchain");
@@ -220,7 +290,6 @@ public class CommunityPage extends BaseTest {
     	  try {
   			Thread.sleep(3000);
   		} catch (InterruptedException e) {
-  			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
           click(natural_language_processing, "natural_language_processing");
@@ -248,14 +317,12 @@ public class CommunityPage extends BaseTest {
     	  try {
   			Thread.sleep(2000);
   		} catch (InterruptedException e) {
-  			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
     	  scrollto(ArtificalIntelligence, "Artifical Intelligence");
     	  try {
   			Thread.sleep(4000);
   		} catch (InterruptedException e) {
-  			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
           click(Computervision, "Computervision");
@@ -273,7 +340,6 @@ public class CommunityPage extends BaseTest {
     	  try {
 			Thread.sleep(4000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
           click(MachineLearning, "MachineLearning");
@@ -290,7 +356,6 @@ public class CommunityPage extends BaseTest {
     	  try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
           click(InternetofThings, "InternetofThings");
@@ -308,7 +373,6 @@ public class CommunityPage extends BaseTest {
     	  try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
           click(QuantumComputing, "QuantumComputing");
@@ -325,7 +389,6 @@ public class CommunityPage extends BaseTest {
     	  try {
 			Thread.sleep(4000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
           click(Jobs, "Jobs");
@@ -341,7 +404,6 @@ public class CommunityPage extends BaseTest {
     	  try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
           click(Robotics, "Robotics");
@@ -351,5 +413,92 @@ public class CommunityPage extends BaseTest {
           actualtxt=getText(LeaveGroupNotification, "Leave Group Notification");
           asserttxt(expectedNotification, actualtxt, "Assertion on notifications");
           click(JoinGroup, "Join Group");
-      } 
+      }
+          
+          public void invite(){
+              click(invite, "invite");
+             
+          }
+         
+          public void Docs(){
+              click(Docs, "Docs");
+              
+          }
+          
+          public void Events(){
+              click(Docs, "Events");
+              
+          }
+          
+          public void Menubutton(){
+              click(Docs, "Menubutton");
+              
+}
+          
+          public void Members(){
+              click(Docs, "Members");
+          
+          }
+      
+          public void activity(){
+        	  submenuexpander(dropdownmenu, activity, "Activity");
+              
+          }   
+          
+          public void Profile(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(profile, "Profile");
+          }      
+          
+          public void Notifications(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(notifications, "Notifications");
+          }     
+          
+          public void Messages(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(messages, "Messages");
+          }     
+          
+          public void Friendrequests(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(Friendsrequests, "FriendRequests");
+          }     
+          
+          public void GroupInvites(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(GroupInvites, "GroupInvites");
+          }        
+
+          public void Forums(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(Forums, "Forums");
+          }     
+
+          public void AddanewPost(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(AddaNewPost, "AddanewPost");
+              click(userlogin, "userlogin");
+              click(userpass, "userpass");
+              click(submit, "submit");
+          }   
+
+          public void Settings(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(Settings, "Settings");
+          }   
+
+          public void LogOut(){
+              click(Community, "Community");
+              click(dropdownmenu, "dropdownmenu");
+              click(LogOut, "LogOut");
+          }   
 }

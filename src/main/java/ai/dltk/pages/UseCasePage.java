@@ -89,7 +89,7 @@ public class UseCasePage extends BaseTest{
     }
 
     public void login(String userName, String password){
-    	closeChatBOt(iframe, close);
+    	closeChatBOt(iframe, close,"Close Chatbot");
         sendKeys(this.userName,userName,"Username");
         sendKeys(this.password,password,"Password");
         click(loginButton, "Login Button");
@@ -102,7 +102,7 @@ public class UseCasePage extends BaseTest{
   			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
-    	submenuelement(OpenSource, UseCases);
+    	submenuelement(OpenSource, UseCases,"Open UseCases");
     	try {
   			Thread.sleep(4000);
   		} catch (InterruptedException e) {
@@ -123,7 +123,7 @@ public class UseCasePage extends BaseTest{
   			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
-    	submenuelement(OpenSource, UseCases);
+    	submenuelement(OpenSource, UseCases,"Open UseCases");
     	try {
   			Thread.sleep(3000);
   		} catch (InterruptedException e) {
@@ -145,7 +145,7 @@ public class UseCasePage extends BaseTest{
    			// TODO Auto-generated catch block
    			e.printStackTrace();
    		}
-     	submenuelement(OpenSource, UseCases);
+     	submenuelement(OpenSource, UseCases,"Open UseCases");
      	try {
    			Thread.sleep(3000);
    		} catch (InterruptedException e) {
@@ -166,7 +166,7 @@ public class UseCasePage extends BaseTest{
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
-      	submenuelement(OpenSource, UseCases);
+      	submenuelement(OpenSource, UseCases,"Open UseCases");
       	try {
     			Thread.sleep(4000);
     		} catch (InterruptedException e) {
