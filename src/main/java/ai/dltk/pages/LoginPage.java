@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
 import ai.generic.BaseTest;
 
 public class LoginPage extends BaseTest {
@@ -62,6 +62,13 @@ public class LoginPage extends BaseTest {
     	closeChatBOt(iframe, close,"Close Chatbot");
         sendKeys(this.userName,userName,"Username");
         sendKeys(this.password,password,"Password");
+
+        assertSoftly(softAssertions -> {
+            softAssertions.assertThat(password)
+                    .hasSize(12)
+                    .doesNotContainAnyWhitespaces();
+        });
+
         click(loginButton, "Login Button");
     }
     

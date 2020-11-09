@@ -12,34 +12,34 @@ import ai.generic.BaseTest;
 public class CommunityPage extends BaseTest {
 	
 
-	private String expectedNotification= "You successfully left the group.";
-	private String AIHeader= "Artificial Intelligence";
-	private String DeepLearningHeader= "Deep Learning";
-	private String BlockchainHeader= "Blockchain";
-	private String DronesHeader= "Drones";
-	private String NLPHeader= "Natural Language Processing";
-	private String ARHeader= "Augmented Reality";
-	private String CVHeader= "Computer Vision";
-	private String MLHeader= "Machine Learning";
-	private String IOTHeader= "Internet of Things";
-	private String QuantumComputingHeader= "Quantum Computing";
-	private String JOBHeader= "Jobs";
-	private String RoboticsHeader= "Robotics";
-	private String InviteHeader= "Invite";
-	private String DocsHeader= "Docs";
-	private String EventsHeader= "Events";
-	private String MenubuttonHeader= "Menubutton"; 
-	private String MembersHeader= "Members";
-	private String ActivityHeader= "Activity";
-	private String ProfileHeader= "Profile";
-	private String NotificationsHeader= "Notifications";
-	private String MessagesHeader= "MessagesActivity";
-	private String FriendRequestsHeader= "FriendRequests";
-	private String GroupInvitesHeader= "GroupInvites";
-	private String ForumsHeader= "Forums";
-	private String AddaNewPostHeader= "AddaNewPost";
-	private String SettingsHeader= "Settings";
-	private String LogOutHeader= "LogOut";
+	private final String expectedNotification= "You successfully left the group.";
+	private final String AIHeader= "Artificial Intelligence";
+	private final String DeepLearningHeader= "Deep Learning";
+	private final String BlockchainHeader= "Blockchain";
+	private final String DronesHeader= "Drones";
+	private final String NLPHeader= "Natural Language Processing";
+	private final String ARHeader= "Augmented Reality";
+	private final String CVHeader= "Computer Vision";
+	private final String MLHeader= "Machine Learning";
+	private final String IOTHeader= "Internet of Things";
+	private final String QuantumComputingHeader= "Quantum Computing";
+	private final String JOBHeader= "Jobs";
+	private final String RoboticsHeader= "Robotics";
+	private final String InviteHeader= "Invite";
+	private final String DocsHeader= "Docs";
+	private final String EventsHeader= "Events";
+	private final String MenubuttonHeader= "Menubutton";
+	private final String MembersHeader= "Members";
+	private final String ActivityHeader= "Activity";
+	private final String ProfileHeader= "Profile";
+	private final String NotificationsHeader= "Notifications";
+	private final String MessagesHeader= "MessagesActivity";
+	private final String FriendRequestsHeader= "FriendRequests";
+	private final String GroupInvitesHeader= "GroupInvites";
+	private final String ForumsHeader= "Forums";
+	private final String AddaNewPostHeader= "AddaNewPost";
+	private final String SettingsHeader= "Settings";
+	private final String LogOutHeader= "LogOut";
 	
 	
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']") 
@@ -202,13 +202,7 @@ public class CommunityPage extends BaseTest {
         sendKeys(this.password,password,"Password");
         click(loginButton, "Login Button");
     }
-    
-    public void community1(){
-        click(Community, "Community");
-        click(ArtificalIntelligence, "Artifical Intelligence");
-        String actualtxt=getText(LeaveGroupNotification, "Leave Group Notification");
-        asserttxt(expectedNotification, actualtxt, "Assertion on notifications");
-    }
+
     
     public void blogs(){
         click(Community, "Community");

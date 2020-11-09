@@ -18,6 +18,8 @@ import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.Status;
 
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
 public class BaseTest {
     ToolUtil utils = new ToolUtil();
     public WebDriver driver;
@@ -98,6 +100,11 @@ public class BaseTest {
     public void asserttxt(String expected, String actual,String msg) {
         Assert.assertEquals(actual, expected);
         utils.log().info(msg);
+        assertSoftly(softAssertions -> {
+            softAssertions.assertThat(expected)
+                    .isEqualToIgnoringCase(actual)
+                    .doesNotContainAnyWhitespaces();
+        });
         //ExtentReport.getTest().log(Status.INFO, msg);
     }
 
