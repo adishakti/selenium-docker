@@ -37,4 +37,11 @@ public class ExtentManager {
 		String fileName = "QubitAIAutomationReport_"+ d.toString().replace(":", "_").replace(" ", "_")+".html";
 		return fileName;
 	}
+	public static ExtentReports getInstance( ) {
+		if (extentReports==null)
+		{
+			createInstance();
+		}
+		return extentReports;
+	}
 }

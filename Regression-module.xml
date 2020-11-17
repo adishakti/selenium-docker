@@ -83,8 +83,8 @@
         </classes>
     </test>
     <test name="CommunityIOTTest">
-        <parameter name="devUser" value="shakeel@qubitai.tech" />
-        <parameter name="devPassword" value="qwerty" />
+            <parameter name="username" value="aditya@qubitai.tech" />
+            <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.CommunityIOTTest" />
         </classes>
@@ -111,8 +111,8 @@
         </classes>
     </test>
     <test name="CommunityQuantumComputingTest">
-        <parameter name="devUser" value="shakeel@qubitai.tech" />
-        <parameter name="devPassword" value="qwerty" />
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.CommunityQuantumComputingTest" />
         </classes>
@@ -174,8 +174,9 @@
         </classes>
     </test>
     <test name="CommunityActivityTest">
-        <parameter name="devUser" value="shakeel@qubitai.tech" />
-        <parameter name="devPassword" value="qwerty" />
+        <parameter name="username" value="aditya@qubitai.tec
+        h" />
+        <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.CommunityActivityTest" />
         </classes>

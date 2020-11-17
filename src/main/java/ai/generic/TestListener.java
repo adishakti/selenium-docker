@@ -1,10 +1,6 @@
 package ai.generic;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.MediaEntityModelProvider;
-import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -27,15 +23,19 @@ import java.util.Date;
 public class TestListener implements ITestListener {
     ToolUtil utils = new ToolUtil();
     
-    private static ExtentReports extent = ExtentManager.createInstance();
-    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+    //private static ExtentReports extent = ExtentManager.createInstance();
+    //private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
     public void onTestFailure(ITestResult result) {
     	String methodName = result.getMethod().getMethodName();
     	String exceptionMessage = Arrays.toString(result.getThrowable().getStackTrace());
-    	extentTest.get().fail("<details><summary><b><font color=red>"+
-    					"Exception Occured, click to see details:"+"</font></b></summary>"+
+    	//ExtentReport.getTest().fail(exceptionMessage);
+		ExtentReport.getTest().fail("<details><summary><b><font color=red>"+
+									"Exception Occured, click to see details:"+"</font></b></summary>"+
     					exceptionMessage.replaceAll(",", "<br>")+"</details> \n");
+//    	extentTest.get().fail("<details><summary><b><font color=red>"+
+//    					"Exception Occured, click to see details:"+"</font></b></summary>"+
+//    					exceptionMessage.replaceAll(",", "<br>")+"</details> \n");
     	
 		/*
 		 * String path = takeScreenshot(driver,result.getMethod().getMethodName()); try
@@ -76,25 +76,28 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        //ExtentReport.startTest(result.getName(), result.getMethod().getDescription())
-         //       .assignAuthor("Aditya");
-    	ExtentTest test = extent.createTest(result.getTestClass().getName()+" :: "+
-    											result.getMethod().getMethodName());
-    	extentTest.set(test);
+        ExtentReport.startTest(result.getName(), result.getMethod().getDescription())
+                .assignAuthor("Aditya");
+
+//    	ExtentTest test = extent.createTest(result.getTestClass().getName()+" :: "+
+//    											result.getMethod().getMethodName());
+//    	extentTest.set(test);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
        String logText = "<b>Test Method "+result.getMethod().getMethodName()+ " Successful</b>";
        Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
-       extentTest.get().log(Status.PASS, m);
+//       extentTest.get().log(Status.PASS, m);
+		ExtentReport.getTest().pass(m);
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
     	String logText = "<b>Test Method "+result.getMethod().getMethodName()+ " Skipped</b>";
         Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
-        extentTest.get().log(Status.SKIP, m);
+//        extentTest.get().log(Status.SKIP, m);
+		ExtentReport.getTest().skip(m);
     }
 
     @Override
@@ -111,9 +114,8 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        if (extent != null) {
-        	extent.flush();
-        }
+	ExtentReport.EndTest();
+	ExtentManager.getInstance().flush();
     }
     
     public String takeScreenshot(WebDriver driver,String methodName) {
@@ -137,5 +139,6 @@ public class TestListener implements ITestListener {
     	String fileName = methodName+"_"+d.toString().replace(":", "_").replace(" ", "_")+ ".png";
 		return fileName;
     }
+
 }
 

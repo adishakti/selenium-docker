@@ -48,7 +48,7 @@ public class AboutUsPage extends BaseTest {
     @FindBy(xpath = "//li[@id='menu-item-5731']//a[text()='Why DLTK?']")
     private WebElement WhyDLTK;
 
-    @FindBy(xpath = "//div[@id='header-menu-container']/ul/li[3]/a")
+    @FindBy(xpath = "//div[@id='header-menu-container']/ul/li[3]")
     private WebElement AboutUs;
 
     @FindBy(xpath= "//li[@id='menu-item-5896']//a[text()='Teams']")
@@ -69,7 +69,7 @@ public class AboutUsPage extends BaseTest {
     @FindBy(xpath= "//span[text()='Engineering Team']")
     private WebElement EngineeringTeam;
 
-    @FindBy(xpath= "//li[@id='menu-item-5730']//a[text()='Collaborations']")
+    @FindBy(xpath= "//div[@id='header-menu-container']/ul/li[3]//li[3]")
     private WebElement Collaborations;
 
     @FindBy(xpath= "//span[text()='Clients']")
@@ -80,7 +80,6 @@ public class AboutUsPage extends BaseTest {
 
     @FindBy(xpath= "//span[text()='Academic Collaboration']")
     private WebElement AcademicCollaboration;
-
 
 
     public AboutUsPage(WebDriver driver){
@@ -110,28 +109,22 @@ public class AboutUsPage extends BaseTest {
     }
 
     public void WhyDLTK(){
-        submenuexpander(AboutUs,WhyDLTK,"Why DLTK");
+        submenuelement(AboutUs,WhyDLTK,"Why DLTK");
     }
 
     public void Teams(){
-        submenuexpander(AboutUs,Teams,"Teams");
+        submenuelement(AboutUs,Teams,"Teams");
         click(FoundingTeam, "FoundingTeam");
         click(LeadershipTeam, "LeadershipTeam");
         click(ProductTeam, "ProductTeam");
         click(EngineeringTeam, "EngineeringTeam");
         click(AdvisoryBoard, "AdvisoryBoard");
-        click(Collaborations, "Collaborations");
-        click(Clients, "Clients");
-        click(Partners, "Partners");
-        click(AcademicCollaboration, "AcademicCollaboration");
     }
 
     public void Collaborations(){
-        submenuexpander(AboutUs,Collaborations,"Collaborations");
+        submenuelement(AboutUs,Collaborations,"Collaborations");
         click(Partners, "Partners");
         click(AcademicCollaboration, "AcademicCollaboration");
         click(Clients, "Clients");
     }
-
-
 }

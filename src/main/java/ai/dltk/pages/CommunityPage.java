@@ -456,6 +456,11 @@ public class CommunityPage extends BaseTest {
     }
 
     public void activity(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         submenuexpander(dropdownmenu, activity, "Activity");
         String actualtxt=getText(media, "Media text under community");
         asserttxt("Media", actualtxt, "Assertion on community page");

@@ -9,10 +9,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.ITestListener;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -20,7 +22,7 @@ import com.aventstack.extentreports.Status;
 
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
-public class BaseTest {
+public class BaseTest implements ITestListener {
     ToolUtil utils = new ToolUtil();
     public WebDriver driver;
     protected WebDriverWait wait;
@@ -56,8 +58,8 @@ public class BaseTest {
     public void sendKeys(WebElement e, String txt, String msg) {
         waitForVisibility(e);
         utils.log().info(msg);
-        //ExtentReport.getTest().log(Status.INFO, msg);
         e.sendKeys(txt);
+        ExtentReport.getTest().log(Status.INFO, "Written "+txt+" on "+msg);
     }
     public void waitForVisibility(WebElement e) {
         WebDriverWait wait = new WebDriverWait(driver, ToolUtil.WAIT);
@@ -66,35 +68,55 @@ public class BaseTest {
     public void click(WebElement e, String msg) {
         waitForVisibility(e);
         utils.log().info(msg);
-        //ExtentReport.getTest().log(Status.INFO, msg);
         e.click();
+        ExtentReport.getTest().log(Status.INFO, "Click on: "+msg);
+    }
+    public void waitForLoad() {
+        ExpectedCondition<Boolean> expectation = new
+                ExpectedCondition<Boolean>() {
+                    public Boolean apply(WebDriver driver) {
+                        return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
+                    }
+                };
+        try {
+            Thread.sleep(1000);
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(expectation);
+        } catch (Throwable error) {
+            Assert.fail("Timeout waiting for Page Load Request to complete.");
+        }
+        ExtentReport.getTest().log(Status.INFO, "Wait for page load");
     }
     
     public void scrollto(WebElement e, String msg) {
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", e);
         waitForVisibility(e);
+        ExtentReport.getTest().log(Status.INFO, "Scroll to: "+msg);
     }
     
     public void cataloguesubmenu(WebElement menu,WebElement submenu,WebElement e,String msg) {
+        waitForLoad();
     	Actions action = new Actions(driver);
         action.moveToElement(menu).perform();
         action.moveToElement(submenu).perform();
         action.moveToElement(e).click().perform();
-        //ExtentReport.getTest().log(Status.INFO, msg);
+        ExtentReport.getTest().log(Status.INFO, "Click on Submenu Item: "+msg);
     }
     
     public void submenuelement(WebElement menu,WebElement e,String msg) {
+        waitForLoad();
     	Actions action = new Actions(driver);
         action.moveToElement(menu).perform();
         action.moveToElement(e).click().perform();
-        //ExtentReport.getTest().log(Status.INFO, msg);
+        ExtentReport.getTest().log(Status.INFO, "Click on Submenu Item: "+msg);
     }
     
     public void submenuexpander(WebElement menu,WebElement e,String msg) {
+        waitForLoad();
     	Actions action = new Actions(driver);
-        action.moveToElement(menu).perform();
+        action.moveToElement(menu).click().perform();
         action.moveToElement(e).click().perform();
-        //ExtentReport.getTest().log(Status.INFO, msg);
+        ExtentReport.getTest().log(Status.INFO, "Click on Submenu Item: "+msg);
     }
 
     public void asserttxt(String expected, String actual,String msg) {
@@ -102,17 +124,18 @@ public class BaseTest {
         utils.log().info(msg);
         assertSoftly(softAssertions -> {
             softAssertions.assertThat(expected)
-                    .isEqualToIgnoringCase(actual)
-                    .doesNotContainAnyWhitespaces();
+                    .isEqualToIgnoringCase(actual);
+                    //.doesNotContainAnyWhitespaces();
         });
-        //ExtentReport.getTest().log(Status.INFO, msg);
+        ExtentReport.getTest().log(Status.INFO, "Assertion on "+msg+" Expected String is "+expected+" and Actual String is "+actual);
     }
 
     public String getText(WebElement e, String msg) {
+        waitForLoad();
         waitForVisibility(e);
         String txt = e.getText();
         utils.log().info(msg + txt);
-        //ExtentReport.getTest().log(Status.INFO, msg);
+        ExtentReport.getTest().log(Status.INFO, "Get text from: "+msg);
         return txt;
     }
     
@@ -127,6 +150,6 @@ public class BaseTest {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iframe));
 		e.click();
 		driver.switchTo().parentFrame();
-		//ExtentReport.getTest().log(Status.INFO, msg);
+		ExtentReport.getTest().log(Status.INFO, "Click on "+msg);
     }
 }
