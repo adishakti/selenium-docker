@@ -16,8 +16,5 @@ public class SmartFeedAIaidsgeneTest extends BaseTest{
 	        loginPage.login(username,password);
 	        SmartFeedPage smartPage = new SmartFeedPage(driver);
 	        smartPage.AIaidsgene();
-		
-}
-
-	 
+	 }
 }

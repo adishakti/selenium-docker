@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression-module">
-<listeners>
-<listener class-name="ai.generic.TestListener"></listener>
-</listeners>
+<suite name="Login-registration-module">
+    <listeners>
+        <listener class-name="ai.generic.TestListener"></listener>
+    </listeners>
     <test name="LoginTest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
@@ -10,7 +10,7 @@
             <class name="ai.dltk.tests.LoginTest" />
         </classes>
     </test>
-   <!--  <test name="DevLoginTest">
+    <test name="DevLoginTest">
         <parameter name="devUser" value="shakeel@qubitai.tech" />
         <parameter name="devPassword" value="qwerty" />
         <parameter name="username" value="aditya@qubitai.tech" />
@@ -19,7 +19,7 @@
             <class name="ai.dltk.tests.DevLoginTest" />
         </classes>
     </test>
-   <test name="CommunityAITest">
+    <test name="CommunityAITest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
         <classes>
@@ -33,76 +33,13 @@
             <class name="ai.dltk.tests.CommunityAugmentedRealityTest" />
         </classes>
     </test>
-   <test name="CommunityBlockchainTest">
+    <test name="CommunityBlockchainTest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.CommunityBlockchainTest" />
         </classes>
     </test>
-       <test name="CommunityCVTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityCVTest" />
-        </classes>
-    </test>
-    <test name="CommunityDeepLearningTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityDeepLearningTest" />
-        </classes>
-    </test>
-    <test name="CommunityDronesTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityDronesTest" />
-        </classes>
-    </test>
-    <test name="CommunityIOTTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityIOTTest" />
-        </classes>
-    </test>
-    <test name="CommunityJobsTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityJobsTest" />
-        </classes>
-    </test>
-    <test name="CommunityMLTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityMLTest" />
-        </classes>
-    </test>
-   <test name="CommunityNLPTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityNLPTest" />
-        </classes>
-    </test>
-   <test name="CommunityQuantumComputingTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityQuantumComputingTest" />
-        </classes>
-    </test>
-     <test name="CommunityRoboticsTest">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.CommunityRoboticsTest" />
-        </classes>
-    </test> 
     <test name="CatalogueCVTest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
@@ -124,33 +61,494 @@
             <class name="ai.dltk.tests.CatalogueNLPTest" />
         </classes>
     </test>
-
-      <test name="UseCasePredictAgeGenderTest">
+    <test name="CommunityCVTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityCVTest" />
+        </classes>
+    </test>
+    <test name="CommunityDeepLearningTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityDeepLearningTest" />
+        </classes>
+    </test>
+    <test name="CommunityDronesTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityDronesTest" />
+        </classes>
+    </test>
+    <test name="CommunityIOTTest">
+        <parameter name="devUser" value="shakeel@qubitai.tech" />
+        <parameter name="devPassword" value="qwerty" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityIOTTest" />
+        </classes>
+    </test>
+    <test name="CommunityJobsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityJobsTest" />
+        </classes>
+    </test>
+    <test name="CommunityMLTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityMLTest" />
+        </classes>
+    </test>
+    <test name="CommunityNLPTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityNLPTest" />
+        </classes>
+    </test>
+    <test name="CommunityQuantumComputingTest">
+        <parameter name="devUser" value="shakeel@qubitai.tech" />
+        <parameter name="devPassword" value="qwerty" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityQuantumComputingTest" />
+        </classes>
+    </test>
+    <test name="CommunityRoboticsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityRoboticsTest" />
+        </classes>
+    </test>
+    <test name="UseCasePredictAgeGenderTest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.UseCasePredictAgeGenderTest" />
         </classes>
-    </test> 
-  		<test name="UseCaseDNASequencingTest">
+    </test>
+    <test name="UseCaseDNASequencingTest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.UseCaseDNASequencingTest" />
         </classes>
     </test>
-   <test name="UseCasePredictElectricityTest">
+    <test name="UseCasePredictElectricityTest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.UseCasePredictElectricityTest" />
         </classes>
     </test>
-   <test name="UseCaseQuoraTest">
+    <test name="UseCaseQuoraTest">
         <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.UseCaseQuoraTest" />
         </classes>
-    </test> -->
+    </test>
+    <test name="AboutUsCollaborations">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.AboutUsCollaborations" />
+        </classes>
+    </test>
+    <test name="AboutUsTeams">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.AboutUsTeams" />
+        </classes>
+    </test>
+    <test name="AboutUsWhyDLTK">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.AboutUsWhyDLTK" />
+        </classes>
+    </test>
+    <test name="CommunityActivityTest">
+        <parameter name="devUser" value="shakeel@qubitai.tech" />
+        <parameter name="devPassword" value="qwerty" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityActivityTest" />
+        </classes>
+    </test>
+    <test name="CommunityAddanewpostTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityAddanewpostTest" />
+        </classes>
+    </test>
+    <test name="CommunityFriendrequestsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityFriendrequestsTest" />
+        </classes>
+    </test>
+    <test name="CommunityGroupInvitesTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityGroupInvitesTest" />
+        </classes>
+    </test>
+    <test name="CommunityLogOutTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityLogOutTest" />
+        </classes>
+    </test>
+    <test name="CommunityMessagesTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityMessagesTest" />
+        </classes>
+    </test>
+    <test name="CommunityNotificationTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunityNotificationTest" />
+        </classes>
+    </test>
+    <test name="communityProfile">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.communityProfile" />
+        </classes>
+    </test>
+    <test name="CommunitySettingsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.CommunitySettingsTest" />
+        </classes>
+    </test>
+    <test name="DIYReviewInspector">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.DIYReviewInspector" />
+        </classes>
+    </test>
+    <test name="DIYSmartCamera">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.DIYSmartCamera" />
+        </classes>
+    </test>
+    <test name="gitHubLink">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.gitHubLink" />
+        </classes>
+    </test>
+    <test name="communityProfile">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.communityProfile" />
+        </classes>
+    </test>
+    <test name="SmartFeedAIaidsgeneTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedAIaidsgeneTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedAIcanspeedTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedAIcanspeedTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedAITeachersBeEffectiveTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedAITeachersBeEffectiveTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedBirdWatchingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedBirdWatchingTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedBusyWeekTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedBusyWeekTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedClassifyingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedClassifyingTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedCockroachLizardsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedCockroachLizardsTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedCurveFittingPythonTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedCurveFittingPythonTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedDeeplearningAITest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedDeeplearningAITest" />
+        </classes>
+    </test>
+    <test name="SmartFeedDetectAsymptomaticTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedDetectAsymptomaticTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedDevelopAnIntuitionTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedDevelopAnIntuitionTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedDifferenceBetweenTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedDifferenceBetweenTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedGeneratedContentTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedGeneratedContentTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedGovInvestmentsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedGovInvestmentsTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedGreenDataCentersTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedGreenDataCentersTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedHHSAutomatingHiringTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedHHSAutomatingHiringTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedKeyBenefitsofAITest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedKeyBenefitsofAITest" />
+        </classes>
+    </test>
+    <test name="SmartFeedMarineBatteryProdTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedMarineBatteryProdTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedMemoryResistorsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedMemoryResistorsTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedMLToTrackTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedMLToTrackTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedMotivationArtificialBeingsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedMotivationArtificialBeingsTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedNervousSysInsectsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedNervousSysInsectsTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedOptimizingRevenueTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedOptimizingRevenueTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedOverfittingRevenueTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedOverfittingRevenueTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedProjectsProgressingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedProjectsProgressingTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedRealityFuelTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedRealityFuelTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedResiliencyAndSecurityTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedResiliencyAndSecurityTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedRoboticAIlearnsTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedRoboticAIlearnsTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedSaferHeaderTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedSaferHeaderTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedSeriesForecastingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedSeriesForecastingTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedShoppingFestiveSeasonTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedShoppingFestiveSeasonTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedSkillsDevPhysicalAITest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedSkillsDevPhysicalAITest" />
+        </classes>
+    </test>
+    <test name="SmartFeedSoftSuppliersRespondingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedSoftSuppliersRespondingTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedStochasticHillClimbingTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedStochasticHillClimbingTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedStudentsdeveloptoolTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedStudentsdeveloptoolTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedTestingsewagetohomeTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedTestingsewagetohomeTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedTheRoleofMentalTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedTheRoleofMentalTest" />
+        </classes>
+    </test>
+    <test name="SmartFeedTrustlevelsinAITest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedTrustlevelsinAITest" />
+        </classes>
+    </test>
+    <test name="SmartFeedUseOfRiskierTest">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.SmartFeedUseOfRiskierTest" />
+        </classes>
+    </test>
+    <test name="WhitePapersDetectingEmotions">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.WhitePapersDetectingEmotions" />
+        </classes>
+    </test>
+    <test name="WhitePapersPredictiveMaintenance">
+        <parameter name="username" value="aditya@qubitai.tech" />
+        <parameter name="password" value="ne0tericnevi" />
+        <classes>
+            <class name="ai.dltk.tests.WhitePapersPredictiveMaintenance" />
+        </classes>
+    </test>
 </suite>
