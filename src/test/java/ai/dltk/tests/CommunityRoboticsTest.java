@@ -13,7 +13,7 @@ public class CommunityRoboticsTest extends BaseTest {
 
     @Test
     @Parameters({"username","password"})
-    public void CommunityDeepLearning(@Optional("Abc") String username, String password) {
+    public void CommunityRobotics(@Optional("Abc") String username, String password) {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         loginPage.login(username,password);

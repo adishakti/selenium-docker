@@ -75,6 +75,6 @@ public class GithubPage extends BaseTest {
 
     public void githublink(){
         submenuexpander(OpenSource,GitHub,"GitHub");
-        getText(GitHubName,"Github name");
+        //getText(GitHubName,"Github name");
     }
 }

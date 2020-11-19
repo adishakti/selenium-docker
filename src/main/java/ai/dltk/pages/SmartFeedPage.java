@@ -72,7 +72,7 @@ public class SmartFeedPage extends BaseTest {
     @FindBy(xpath = "//div[@aria-label='close']")
     private WebElement close;
 
-    @FindBy(xpath = "//li[@id='menu-item-5751']//a[normalize-space()='Smart Feed']")
+    @FindBy(xpath = "//li[@id='menu-item-5751']/a[normalize-space()='Smart Feed']")
     private WebElement SmartFeed;
 
     @FindBy(xpath = "//h1[normalize-space()='Classifying galaxies with artificial intelligence']")
@@ -80,6 +80,10 @@ public class SmartFeedPage extends BaseTest {
 
     @FindBy(xpath = "//a[normalize-space()='READ FULL ARTICLE HERE']")
     private WebElement Readthefullarticles ;
+
+    @FindBy(xpath = "//a[normalize-space()='CLICK HERE TO READ THE FULL ARTICLE']")
+    private WebElement Readthefullarticles2 ;
+
 
     @FindBy(xpath = "//a[contains(text(),'Optimizing Retailer Revenue with Sales Forecasting')]")
     private WebElement OptimizingRetailerRevenue ;
@@ -237,29 +241,44 @@ public class SmartFeedPage extends BaseTest {
     }
 
     public void ClassifyingGalaxies(){
+        waitForLoad();
         click(SmartFeed, "SmartFeed");
+        waitForLoad();
         click(ClassifyingGalaxies, "ClassifyingGalaxies");
+        waitForLoad();
         click(Readthefullarticles, "Readthefullarticles");
 
     }
 
     public void OptimizingRetailerRevenue(){
+        waitForLoad();
         click(SmartFeed, "SmartFeed");
+        waitForLoad();
         click(OptimizingRetailerRevenue, "OptimizingRetailerRevenue");
-        click(Readthefullarticles, "Readthefullarticles");
+        waitForLoad();
+        scrolldown();
+        //scrollto(Readthefullarticles2,"Read The Full Articles");
+        waitForLoad();
+        click(Readthefullarticles2, "Read The Full Articles");
 
     }
 
     public void RoboticAIlearns(){
+        waitForLoad();
         click(SmartFeed, "SmartFeed");
+        waitForLoad();
         click(RoboticAIlearns, "RoboticAIlearns");
+        waitForLoad();
         click(Readthefullarticles, "Readthefullarticles");
 
     }
 
     public void DeeplearningAI(){
+        waitForLoad();
         click(SmartFeed, "SmartFeed");
+        waitForLoad();
         click(DeeplearningAI, "DeeplearningAI");
+        waitForLoad();
         click(Readthefullarticles, "Readthefullarticles");
 
     }
@@ -267,16 +286,22 @@ public class SmartFeedPage extends BaseTest {
 
 
     public void HowtoIdentifyOverfitting(){
+        waitForLoad();
         click(SmartFeed, "SmartFeed");
+        waitForLoad();
         click(HowtoIdentifyOverfitting, "HowtoIdentifyOverfitting");
+        waitForLoad();
         click(Readthefullarticles, "Readthefullarticles");
 
     }
 
 
     public void SkillsdevelopmentinPhysicalAI(){
+        waitForLoad();
         click(SmartFeed, "SmartFeed");
+        waitForLoad();
         click(SkillsdevelopmentinPhysicalAI, "SkillsdevelopmentinPhysicalAI");
+        waitForLoad();
         click(Readthefullarticles, "Readthefullarticles");
 
     }
@@ -373,7 +398,15 @@ public class SmartFeedPage extends BaseTest {
     }
     public void Artificialintelligencecanspeed(){
         click(SmartFeed, "SmartFeed");
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
         click(Artificialintelligencecanspeed, "Artificialintelligencecanspeed");
+        scrolldown();
         click(Readthefullarticles, "Readthefullarticles");
 
     }
@@ -387,8 +420,17 @@ public class SmartFeedPage extends BaseTest {
 
     public void AIaidsgene(){
         click(SmartFeed, "SmartFeed");
-        click(AIaidsgene, "AIaidsgene");
-        click(Readthefullarticles, "Readthefullarticles");
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrollto(AIaidsgene,"AI aids gene");
+        click(AIaidsgene, "AI aids gene");
+        scrolldown();
+        click(Readthefullarticles2, "Read the full articles");
 
     }
 
@@ -444,8 +486,17 @@ public class SmartFeedPage extends BaseTest {
     }
     public void AIteachersmustbeeffective(){
         click(SmartFeed, "SmartFeed");
+//        scrolldown();
+//        scrolldown();
+//        scrolldown();
+//        scrolldown();
+//        scrolldown();
+//        scrolldown();
+//        scrolldown();
+        scrollto(AIteachersmustbeeffective,"AIteachersmustbeeffective");
         click(AIteachersmustbeeffective, "AIteachersmustbeeffective");
-        click(Readthefullarticles, "Readthefullarticles");
+        scrolldown();
+        click(Readthefullarticles2, "Readthefullarticles");
 
     }
     public void SpookierOrSafer(){

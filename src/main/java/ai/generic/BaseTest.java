@@ -70,6 +70,7 @@ public class BaseTest implements ITestListener {
         utils.log().info(msg);
         e.click();
         ExtentReport.getTest().log(Status.INFO, "Click on: "+msg);
+        waitForLoad();
     }
     public void waitForLoad() {
         ExpectedCondition<Boolean> expectation = new
@@ -89,9 +90,33 @@ public class BaseTest implements ITestListener {
     }
     
     public void scrollto(WebElement e, String msg) {
-    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", e);
+        waitForLoad();
+        waitForLoad();
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].scrollIntoView(true);", e);
+
+    	//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", e);
         waitForVisibility(e);
         ExtentReport.getTest().log(Status.INFO, "Scroll to: "+msg);
+    }
+
+    public void scrolltill(WebElement e, String msg) {
+        while (!e.isDisplayed()) {
+            waitForLoad();
+            scrolldown();
+            waitForLoad();
+        }
+        waitForVisibility(e);
+        ExtentReport.getTest().log(Status.INFO, "Scroll to: "+msg);
+    }
+
+
+    public void scrolldown() {
+        waitForLoad();
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,1000)");
+        ExtentReport.getTest().log(Status.INFO, "Scroll Down");
+        waitForLoad();
+        waitForLoad();
     }
     
     public void cataloguesubmenu(WebElement menu,WebElement submenu,WebElement e,String msg) {

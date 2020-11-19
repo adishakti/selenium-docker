@@ -55,7 +55,7 @@ public class DIYPage extends BaseTest {
     @FindBy(xpath= "//span[@class='listFixed'][text()='Project Creation']")
     private WebElement ProjectCreation;
 
-    @FindBy(xpath= "//span[@class='listFixed'][text()='Using SDKs']']")
+    @FindBy(xpath= "//span[@class='listFixed'][text()='Using SDKs']")
     private WebElement UsingSDKs;
 
     @FindBy(xpath= "//span[@class='listFixed'][text()='Connect to DLTK']")

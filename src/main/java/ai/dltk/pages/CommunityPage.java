@@ -85,6 +85,9 @@ public class CommunityPage extends BaseTest {
     @FindBy(xpath = "//a[text()='Artificial Intellige...']")
     private WebElement ArtificalIntelligence;
 
+    @FindBy(xpath = "//ul[@id='groups-list']/li[1]/div[1]")
+    private WebElement ArtificalIntelligence2;
+
     @FindBy(xpath = "//button[normalize-space()='Join Group']")
     private WebElement JoinGroup;
 
@@ -248,7 +251,7 @@ public class CommunityPage extends BaseTest {
     public void ArtificalIntelligence(){
         //scrollandclick(ArtificalIntelligence, "Artifical Intelligence");
         click(Community, "Community");
-        click(ArtificalIntelligence, "Artifical Intelligence");
+        click(ArtificalIntelligence2, "Artifical Intelligence");
         String actualtxt=getText(communityheader, "Artificial Intelligence Header");
         asserttxt(AIHeader, actualtxt, "Assertion on Artificial Intelligence Header");
         click(LeaveGroup, "Leave Group");
@@ -260,7 +263,6 @@ public class CommunityPage extends BaseTest {
 
     public void Deeplearning(){
         scrollto(ArtificalIntelligence, "Artifical Intelligence");
-        click(deeplearning, "Deep Learning");
         click(deeplearning, "Deep Learning");
         String actualtxt=getText(communityheader, "Deep Learning Header");
         asserttxt(DeepLearningHeader, actualtxt, "Assertion on Deep Learning Header");
@@ -498,9 +500,9 @@ public class CommunityPage extends BaseTest {
 
     public void AddanewPost(){
         submenuexpander(dropdownmenu, AddaNewPost, "Add a New Post");
-        click(userlogin, "userlogin");
-        click(userpass, "userpass");
-        click(submit, "submit");
+//        click(userlogin, "userlogin");
+//        click(userpass, "userpass");
+//        click(submit, "submit");
     }
 
     public void Settings(){

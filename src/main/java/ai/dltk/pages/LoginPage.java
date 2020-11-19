@@ -70,6 +70,7 @@ public class LoginPage extends BaseTest {
         });
 
         click(loginButton, "Login Button");
+        waitForLoad();
     }
     
     public void developerAccess(){

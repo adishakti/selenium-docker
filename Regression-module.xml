@@ -174,8 +174,7 @@
         </classes>
     </test>
     <test name="CommunityActivityTest">
-        <parameter name="username" value="aditya@qubitai.tec
-        h" />
+        <parameter name="username" value="aditya@qubitai.tech" />
         <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.CommunityActivityTest" />
@@ -256,13 +255,6 @@
         <parameter name="password" value="ne0tericnevi" />
         <classes>
             <class name="ai.dltk.tests.gitHubLink" />
-        </classes>
-    </test>
-    <test name="communityProfile">
-        <parameter name="username" value="aditya@qubitai.tech" />
-        <parameter name="password" value="ne0tericnevi" />
-        <classes>
-            <class name="ai.dltk.tests.communityProfile" />
         </classes>
     </test>
     <test name="SmartFeedAIaidsgeneTest">
