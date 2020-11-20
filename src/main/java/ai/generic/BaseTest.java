@@ -3,6 +3,7 @@ package ai.generic;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -91,23 +92,25 @@ public class BaseTest implements ITestListener {
     
     public void scrollto(WebElement e, String msg) {
         waitForLoad();
-        waitForLoad();
         JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].scrollIntoView(true);", e);
-
-    	//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", e);
+        executor.executeScript("arguments[0].scrollIntoView(false);", e);
         waitForVisibility(e);
         ExtentReport.getTest().log(Status.INFO, "Scroll to: "+msg);
     }
 
-    public void scrolltill(WebElement e, String msg) {
-        while (!e.isDisplayed()) {
+    public void scrollandClick(WebElement e, String msg) {
+        int x=1;
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        while (x<23) {
+            executor.executeScript("window.scrollTo(0, document.body.scrollHeight);");
             waitForLoad();
-            scrolldown();
             waitForLoad();
+            waitForLoad();
+            x++;
         }
-        waitForVisibility(e);
-        ExtentReport.getTest().log(Status.INFO, "Scroll to: "+msg);
+        executor.executeScript("arguments[0].scrollIntoView(false);", e);
+        e.click();
+        ExtentReport.getTest().log(Status.INFO, "Scroll and click: "+msg);
     }
 
 
