@@ -87,21 +87,20 @@ public class BaseTest implements ITestListener {
         } catch (Throwable error) {
             Assert.fail("Timeout waiting for Page Load Request to complete.");
         }
-        ExtentReport.getTest().log(Status.INFO, "Wait for page load");
     }
     
     public void scrollto(WebElement e, String msg) {
         waitForLoad();
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].scrollIntoView(false);", e);
-        waitForVisibility(e);
+        //waitForVisibility(e);
         ExtentReport.getTest().log(Status.INFO, "Scroll to: "+msg);
     }
 
     public void scrollandClick(WebElement e, String msg) {
         int x=1;
         JavascriptExecutor executor = (JavascriptExecutor) driver;
-        while (x<23) {
+        while (x<28) {
             executor.executeScript("window.scrollTo(0, document.body.scrollHeight);");
             waitForLoad();
             waitForLoad();

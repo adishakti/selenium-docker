@@ -74,7 +74,7 @@ public class SmartFeedPage extends BaseTest {
     @FindBy(xpath = "//li[@id='menu-item-5751']/a[normalize-space()='Smart Feed']")
     private WebElement SmartFeed;
 
-    @FindBy(xpath = "//h1[normalize-space()='Classifying galaxies with artificial intelligence']")
+    @FindBy(xpath = "//a[contains(text(),'Classifying galaxies with artificial intelligence')]")
     private WebElement ClassifyingGalaxies ;
 
     @FindBy(xpath = "//a[normalize-space()='READ FULL ARTICLE HERE']")
@@ -82,6 +82,14 @@ public class SmartFeedPage extends BaseTest {
 
     @FindBy(xpath = "//a[normalize-space()='CLICK HERE TO READ THE FULL ARTICLE']")
     private WebElement Readthefullarticles2 ;
+
+    @FindBy(xpath = "//a[normalize-space()='READ THE FULL ARTICLE HERE']")
+    private WebElement Readthefullarticles3 ;
+
+
+
+    @FindBy(xpath = "//a[normalize-space()='CLICK HERE TO READ FULL ARTICLE']")
+    private WebElement Readthefullarticles4 ;
 
 
     @FindBy(xpath = "//a[contains(text(),'Optimizing Retailer Revenue with Sales Forecasting')]")
@@ -104,6 +112,7 @@ public class SmartFeedPage extends BaseTest {
 
     @FindBy(xpath = "//a[contains(text(),'Develop an Intuition for How Ensemble Learning Wor')]")
     private WebElement DevelopanIntuition ;
+
 
     @FindBy(xpath = "//a[contains(text(),'Deep learning artificial intelligence keeps an eye')]")
     private WebElement DeeplearningAI ;
@@ -244,8 +253,8 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(ClassifyingGalaxies, "Classifying Galaxies");
         scrolldown();
-        scrollto(Readthefullarticles, "Readthefullarticles");
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void OptimizingRetailerRevenue(){
@@ -262,8 +271,8 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(RoboticAIlearns, "RoboticAIlearns");
         scrolldown();
-        scrollto(Readthefullarticles, "Readthefullarticles");
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void DeeplearningAI(){
@@ -289,8 +298,8 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(SkillsdevelopmentinPhysicalAI, "SkillsdevelopmentinPhysicalAI");
         scrolldown();
-        scrollto(Readthefullarticles, "Readthefullarticles");
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void Shoppingonlineforthefestiveseason(){
@@ -322,15 +331,19 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(HHSAutomatingHiring, "HHSAutomatingHiring");
         scrolldown();
-        scrollto(Readthefullarticles, "Readthefullarticles");
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void SoftwareSuppliersResponding(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(SoftwareSuppliersResponding, "SoftwareSuppliersResponding");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrolldown();
+        scrolldown();
+        scrolldown();
+        scrollto(Readthefullarticles4, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
 
     }
 
@@ -338,34 +351,35 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(GreenDataCenters, "GreenDataCenters");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrolldown();
+        scrolldown();
+        scrollto(Readthefullarticles4, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void MarineBatteryProduction(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(MarineBatteryProduction, " MarineBatteryProduction");
-        scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void TheRoleofMental(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(TheRoleofMental, "TheRoleofMental");
-        scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void AICloudMobileandRealityFuel(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(AICloudMobileandRealityFuel, "AICloudMobileandRealityFuel");
-        scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void StochasticHillClimbing(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(StochasticHillClimbing, "StochasticHillClimbing");
         scrolldown();
+        scrollto(Readthefullarticles, "Readthefullarticles");
         click(Readthefullarticles, "Readthefullarticles");
     }
 
@@ -373,6 +387,7 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(DevelopanIntuition, "DevelopanIntuition");
         scrolldown();
+        scrollto(Readthefullarticles, "Readthefullarticles");
         click(Readthefullarticles, "Readthefullarticles");
     }
 
@@ -380,27 +395,31 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(Nervoussystemsofinsects, "Nervoussystemsofinsects");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void Twomotivationalartificialbeings(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Twomotivationalartificialbeings, "Twomotivationalartificialbeings");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void Usingmachinelearningtotrack(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Usingmachinelearningtotrack, "Usingmachinelearningtotrack");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles3, "Readthefullarticles");
+        click(Readthefullarticles3, "Readthefullarticles");
     }
 
     public void Artificialintelligencecanspeed(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Artificialintelligencecanspeed, "Artificialintelligencecanspeed");
         scrolldown();
+        scrollto(Readthefullarticles, "Readthefullarticles");
         click(Readthefullarticles, "Readthefullarticles");
     }
 
@@ -408,6 +427,7 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(CurveFittingWithPython, "CurveFittingWithPython");
         scrolldown();
+        scrollto(Readthefullarticles, "Readthefullarticles");
         click(Readthefullarticles, "Readthefullarticles");
     }
 
@@ -415,6 +435,7 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(AIaidsgene,"AI aids gene");
         scrolldown();
+        scrollto(Readthefullarticles2, "Readthefullarticles");
         click(Readthefullarticles2, "Read the full articles");
     }
 
@@ -422,48 +443,55 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(Studentsdeveloptool, "Studentsdeveloptool");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void Cockroachesandlizards(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Cockroachesandlizards, "Cockroachesandlizards");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void Birdwatchingfromafar(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Birdwatchingfromafar, "Birdwatchingfromafar");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void WhatIsTheDifferenceBetween(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(WhatIsTheDifferenceBetween, "WhatIsTheDifferenceBetween");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void KeyBenefitsofAITechnologies(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(KeyBenefitsofAITechnologies, "KeyBenefitsofAITechnologies");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void WhyAIGeneratedContent(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(WhyAIGeneratedContent, "WhyAIGeneratedContent");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void RandomForestTimeSeriesForecasting(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(RandomForestTimeSeriesForecasting, "RandomForestTimeSeriesForecasting");
         scrolldown();
+        scrollto(Readthefullarticles, "Readthefullarticles");
         click(Readthefullarticles, "Readthefullarticles");
     }
 
@@ -471,41 +499,49 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(AIContactTracerAwarded, "AIContactTracerAwarded");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void AIteachersmustbeeffective(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(AIteachersmustbeeffective,"AIteachersmustbeeffective");
         scrolldown();
+        scrollto(Readthefullarticles2, "Readthefullarticles");
         click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void SpookierOrSafer(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(SpookierOrSafer, "SpookierOrSafer");
-        scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void BusyWeekforGoogle(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(BusyWeekforGoogle, "BusyWeekforGoogle");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrolldown();
+        scrolldown();
+        scrollto(Readthefullarticles4, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void FederalGovernmentInvestments(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(FederalGovernmentInvestments, "FederalGovernmentInvestments");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrolldown();
+        scrolldown();
+        scrollto(Readthefullarticles4, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void HowtoDevelopaRandomSubspace(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(HowtoDevelopaRandomSubspace, "HowtoDevelopaRandomSubspace");
         scrolldown();
+        scrollto(Readthefullarticles, "Readthefullarticles");
         click(Readthefullarticles, "Readthefullarticles");
     }
 
@@ -513,41 +549,45 @@ public class SmartFeedPage extends BaseTest {
         click(SmartFeed, "SmartFeed");
         scrollandClick(TrustlevelsinAI, "TrustlevelsinAI");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void Graphenebasedmemoryresistors(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Graphenebasedmemoryresistors, "Graphenebasedmemoryresistors");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles2, "Readthefullarticles");
+        click(Readthefullarticles2, "Readthefullarticles");
     }
 
     public void Artificialintelligencemodeldetectsasymptomatic(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Artificialintelligencemodeldetectsasymptomatic, "Artificialintelligencemodeldetectsasymptomatic");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles3, "Readthefullarticles");
+        click(Readthefullarticles3, "Readthefullarticles");
     }
 
     public void ResiliencyAndSecurity(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(ResiliencyAndSecurity, "ResiliencyAndSecurity");
-        scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void AIProjectsProgressing(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(AIProjectsProgressing, "AIProjectsProgressing");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles4, "Readthefullarticles");
+        click(Readthefullarticles4, "Readthefullarticles");
     }
 
     public void Testingsewagetohome(){
         click(SmartFeed, "SmartFeed");
         scrollandClick(Testingsewagetohome, "Testingsewagetohome");
         scrolldown();
-        click(Readthefullarticles, "Readthefullarticles");
+        scrollto(Readthefullarticles3, "Readthefullarticles");
+        click(Readthefullarticles3, "Readthefullarticles");
     }
 }

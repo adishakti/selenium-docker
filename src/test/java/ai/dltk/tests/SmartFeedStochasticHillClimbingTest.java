@@ -10,12 +10,12 @@ public class SmartFeedStochasticHillClimbingTest extends BaseTest{
 
 	 @Test
 	    @Parameters({"username","password"})
-	    public void SoftwareSuppliersResponding(@Optional("Abc") String username, String password) {
+	    public void StochasticHillClimbing(@Optional("Abc") String username, String password) {
 	        LoginPage loginPage = new LoginPage(driver);
 	        loginPage.goTo();
 	        loginPage.login(username,password);
 	        SmartFeedPage smartPage = new SmartFeedPage(driver);
-	        smartPage.SoftwareSuppliersResponding();
+	        smartPage.StochasticHillClimbing();
 		
 }
 
