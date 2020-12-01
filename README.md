@@ -1,5 +1,7 @@
 ![](/api/v3/attachments/108/content)
 
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Selenium-local.PNG?raw=true)
+
 Pull all three necessary files in local from dockerhub
 
 `docker pull selenium/hub:3.14`
