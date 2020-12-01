@@ -35,7 +35,8 @@ services:
 
 Create a Java-framework for selenium grid:
 
-![](/api/v3/attachments/109/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Intellij.PNG?raw=true)
+
 
 Open terminal inside Project and run following commands:
 
@@ -81,7 +82,7 @@ RUN apk add curl jq
 ENTRYPOINT java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* \   -DHUB_HOST=$HUB_HOST \   -DBROWSER=$BROWSER \   org.testng.TestNG $MODULE
 ```
 
-![](/api/v3/attachments/110/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Docker.PNG?raw=true)
 
 ## Jenkins Configuration:
 
@@ -93,30 +94,30 @@ Password: admin
 
 We have to add three credentials inside jenkins:
 
-![](/api/v3/attachments/116/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/jenkins-credentials.png?raw=true)
 
 Plugins to install:
 
 EC2 Fleet
 
-![](/api/v3/attachments/117/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/EC2-fleet.PNG?raw=true)
 
 ### Jenkins cloud configuration:
 
-![](/api/v3/attachments/118/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/jenkins-cloud.PNG?raw=true)
 
-![](/api/v3/attachments/119/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/jenkins-cloud2.PNG?raw=true)
 
-![](/api/v3/attachments/120/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/jenkins-cloud3.PNG?raw=true)
 
 ### Jenkins Pipeline Configuration:
 
-![](/api/v3/attachments/121/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Pipeline-configuration.PNG?raw=true)
 
-![](/api/v3/attachments/111/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/AWS Selenium architecture.PNG?raw=true)
 
-![](/api/v3/attachments/112/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Internal cloud framework.PNG?raw=true)
 
 ## AWS Configuration:
 
-![](/api/v3/attachments/113/content)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/jenkins-user.PNG?raw=true)
