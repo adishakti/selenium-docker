@@ -50,9 +50,9 @@ Login to planck.ai docker registry:
 
 `sudo docker login registry.planck.ai`
 
-username: `planckai`
+username: `*&%$#`
 
-password: `planck-ai@registry`
+password: `*&%$^&*$#`
 
 Build docker images on internal docker registry:
 
@@ -88,9 +88,9 @@ ENTRYPOINT java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* \   -DH
 
 Jenkins url: [http://jenkins-dev.planck.ai](http://jenkins-dev.planck.ai)
 
-Username: admin
+Username: *&^%
 
-Password: admin
+Password: %$%^$$
 
 We have to add three credentials inside jenkins:
 
