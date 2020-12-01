@@ -114,9 +114,9 @@ EC2 Fleet
 
 ![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Pipeline-configuration.PNG?raw=true)
 
-![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/AWS Selenium architecture.PNG?raw=true)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/AWS-Selenium-architecture.PNG?raw=true)
 
-![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Internal cloud framework.PNG?raw=true)
+![alt text](https://github.com/adityaver2701/selenium-docker/blob/master/images/Internal-cloud-framework.PNG?raw=true)
 
 ## AWS Configuration:
 
