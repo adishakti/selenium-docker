@@ -6,56 +6,56 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
 import ai.generic.BaseTest;
 
 public class CloudLoginPage extends BaseTest {
 
+	@FindBy(xpath = "//div[@class='landing-main-heading']")
+	private WebElement WelcomeMessage;
 
-    @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']") 
-    private WebElement WelcomeMessage;
-    
-    @FindBy(xpath= "//input[@id='shortcode-user-login']") 
-    private WebElement userName;
-    
-    @FindBy(xpath = "//input[@id='shortcode-user-pass']") 
-    private WebElement password;
-    
-    @FindBy(xpath = "//input[@id='shortcode-login-submit']") 
-    private WebElement loginButton;
-    
-    @FindBy(xpath = "//a[@href='http://developer.dltk.ai'][@class='elementor-button-link elementor-button elementor-size-md']") 
-    private WebElement developerAccess;
-    
-    @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]")
-    private WebElement iframe;
-    
-    @FindBy(xpath = "//div[@aria-label='close']")
-    private WebElement close;
-    
-    @FindBy(xpath = "//a[text()='Sign In']") 
-    private WebElement DevSigninlink;
-    
-    @FindBy(xpath = "//input[@id='i2']") 
-    private WebElement DevUser;
-    
-    @FindBy(xpath = "//input[@id='i4']") 
-    private WebElement DevPass;
-    
-    @FindBy(xpath = "//button[@id='signin-btn']") 
-    private WebElement DevSigninButton;
-    
+	@FindBy(xpath = "//mat-toolbar/div[4]/div[1]/button")
+	private WebElement Login;
 
-    public CloudLoginPage(WebDriver driver){
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, 30);
-        PageFactory.initElements(driver, this);
-    }
+	@FindBy(xpath = "//input[@id='mat-input-8']")
+	private WebElement userName;
 
-    public void goTo(){
-        this.driver.get("https://cloud.dltk.ai/");
-        driver.manage().window().maximize();
-        this.wait.until(ExpectedConditions.visibilityOf(this.WelcomeMessage));
-    }
+	@FindBy(xpath = "//input[@id='mat-input-9']")
+	private WebElement password;
+
+	@FindBy(xpath = "//button[@class='mat-focus-indicator mat-flat-button mat-button-base _mat-animation-noopable']")
+	private WebElement loginButton;
+
+	public CloudLoginPage(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, 30);
+		PageFactory.initElements(driver, this);
+	}
+
+	public void goTo() {
+		this.driver.get("https://dev-angular.dltk.ai");
+		driver.manage().window().maximize();
+		waitForLoad();
+		waitForLoad();
+		this.wait.until(ExpectedConditions.visibilityOf(this.WelcomeMessage));
+	}
+
+	public void login(String userName, String password) {
+		click(Login, "Login Link");
+		sendKeys(this.userName, userName, "Username");
+		sendKeys(this.password, password, "Password");
+//        assertSoftly(softAssertions -> {
+//            softAssertions.assertThat(password)
+//                    .hasSize(12)
+//                    .doesNotContainAnyWhitespaces();
+//        });
+
+		click(loginButton, "Login Button");
+		waitForLoad();
+		waitForLoad();
+		waitForLoad();
+		waitForLoad();
+		TakeScreenshot("Landed to DLTK-AI Home Page");
+	}
 
 }

@@ -1,6 +1,7 @@
 package ai.dltk.pages;
 
-import ai.generic.BaseTest;
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,12 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.assertj.core.api.SoftAssertions.assertSoftly;
+import ai.generic.BaseTest;
 
 public class WhitePapersPage extends BaseTest {
-
-    private String OpenSourceHeader= "Open Source";
-    private String WhitepapersHeader= "Whitepapers";
 
 
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']")

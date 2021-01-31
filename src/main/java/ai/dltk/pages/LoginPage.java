@@ -12,7 +12,7 @@ import ai.generic.BaseTest;
 public class LoginPage extends BaseTest {
 
 
-    @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']") 
+    @FindBy(xpath = "//h2[text()='Our philosophy is to create a Deep Technologies platform with ethical AI for enterprises that offers meaningful insights and actions.']") 
     private WebElement WelcomeMessage;
     
     @FindBy(xpath= "//input[@id='shortcode-user-login']") 

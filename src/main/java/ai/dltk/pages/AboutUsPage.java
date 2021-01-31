@@ -1,6 +1,7 @@
 package ai.dltk.pages;
 
-import ai.generic.BaseTest;
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,23 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.assertj.core.api.SoftAssertions.assertSoftly;
+import ai.generic.BaseTest;
 
 public class AboutUsPage extends BaseTest {
-
-    private String WhyDLTKHeader= "Why DLTK?";
-    private String TeamsHeader= "Teams";
-    private String AdvisoryBoardHeader= "AdvisoryBoard";
-    private String FoundingTeamHeader= "FoundingTeam";
-    private String LeadershipTeamHeader= "LeadershipTeam";
-    private String ProductTeamHeader= "ProductTeam";
-    private String EngineeringTeamHeader= "EngineeringTeam";
-    private String CollaborationsHeader= "Collaborations";
-    private String ClientsHeader= "Clients";
-    private String PartnersHeader= "Partners";
-    private String AcademicCollaborationHeader= "AcademicCollaboration";
-
-
 
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']")
     private WebElement WelcomeMessage;
@@ -37,7 +24,6 @@ public class AboutUsPage extends BaseTest {
 
     @FindBy(xpath = "//input[@id='shortcode-login-submit']")
     private WebElement loginButton;
-
 
     @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]")
     private WebElement iframe;

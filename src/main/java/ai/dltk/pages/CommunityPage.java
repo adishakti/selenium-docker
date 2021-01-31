@@ -25,21 +25,6 @@ public class CommunityPage extends BaseTest {
     private final String QuantumComputingHeader= "Quantum Computing";
     private final String JOBHeader= "Jobs";
     private final String RoboticsHeader= "Robotics";
-    private final String InviteHeader= "Invite";
-    private final String DocsHeader= "Docs";
-    private final String EventsHeader= "Events";
-    private final String MenubuttonHeader= "Menubutton";
-    private final String MembersHeader= "Members";
-    private final String ActivityHeader= "Activity";
-    private final String ProfileHeader= "Profile";
-    private final String NotificationsHeader= "Notifications";
-    private final String MessagesHeader= "MessagesActivity";
-    private final String FriendRequestsHeader= "FriendRequests";
-    private final String GroupInvitesHeader= "GroupInvites";
-    private final String ForumsHeader= "Forums";
-    private final String AddaNewPostHeader= "AddaNewPost";
-    private final String SettingsHeader= "Settings";
-    private final String LogOutHeader= "LogOut";
 
 
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']")
@@ -417,18 +402,12 @@ public class CommunityPage extends BaseTest {
         click(JoinGroup, "Join Group");
     }
     public void Robotics(){
-        scrollto(ArtificalIntelligence, "Artifical Intelligence");
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         click(Robotics, "Robotics");
         String actualtxt=getText(communityheader, "Robotics");
         asserttxt(RoboticsHeader, actualtxt, "Assertion on Robotics Header");
-        click(LeaveGroup, "Leave Group");
-        actualtxt=getText(LeaveGroupNotification, "Leave Group Notification");
-        asserttxt(expectedNotification, actualtxt, "Assertion on notifications");
+//        click(LeaveGroup, "Leave Group");
+//        actualtxt=getText(LeaveGroupNotification, "Leave Group Notification");
+//        asserttxt(expectedNotification, actualtxt, "Assertion on notifications");
         click(JoinGroup, "Join Group");
     }
 

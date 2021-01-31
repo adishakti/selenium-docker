@@ -12,11 +12,6 @@ import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
 public class GithubPage extends BaseTest {
 
-
-
-    private String OpenSourceHeader= "Open Source";
-    private String GitHubHeader= "GitHub";
-
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']")
     private WebElement WelcomeMessage;
 
@@ -28,7 +23,6 @@ public class GithubPage extends BaseTest {
 
     @FindBy(xpath = "//input[@id='shortcode-login-submit']")
     private WebElement loginButton;
-
 
     @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]")
     private WebElement iframe;

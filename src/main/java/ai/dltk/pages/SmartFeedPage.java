@@ -10,48 +10,6 @@ import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
 public class SmartFeedPage extends BaseTest {
 
-
-    private final String ClassifyingGalaxiesHeader= "ClassifyingGalaxies";
-    private final String OptimizingRetailerRevenueHeader= "OptimizingRetailerRevenue";
-    private final String RoboticAIlearnsHeader= "RoboticAIlearns";
-    private final String DeeplearningAIHeader= "DeeplearningAI";
-    private final String HowtoIdentifyOverfittingRevenueHeader= "HowtoIdentifyOverfitting";
-    private final String SkillsdevelopmentinPhysicalAIHeader= "SkillsdevelopmentinPhysicalAI";
-    private final String ShoppingonlineforthefestiveseasonHeader= "Shoppingonlineforthefestiveseason";
-    private final String DevelopanIntuitionHeader= "DevelopanIntuition";
-    private final String HHSAutomatingHiringHeader= "HHSAutomatingHiring";
-    private final String SoftwareSuppliersRespondingHeader= "SoftwareSuppliersResponding";
-    private final String GreenDataCentersHeader= "GreenDataCenters";
-    private final String MarineBatteryProductionHeader= "MarineBatteryProduction";
-    private final String TheRoleofMentalHeader= "TheRoleofMental";
-    private final String AICloudMobileandRealityFuelHeader= "AICloudMobileandRealityFuel";
-    private final String StochasticHillClimbingHeader= "StochasticHillClimbing";
-    private final String NervoussystemsofinsectsHeader= "Nervoussystemsofinsects";
-    private final String AlgorithmreducesuseofriskierHeader= " Algorithmreducesuseofriskier";
-    private final String TwomotivationalartificialbeingsHeader= "Twomotivationalartificialbeings";
-    private final String UsingmachinelearningtotrackHeader= "Usingmachinelearningtotrack";
-    private final String CurveFittingWithPythonHeader= "CurveFittingWithPython";
-    private final String StudentsdeveloptoolHeader= "Studentsdeveloptool";
-    private final String CockroachesandlizardsHeader= "Cockroachesandlizards";
-    private final String ArtificialintelligencecanspeedHeader= "Artificialintelligencecanspeed";
-    private final String AIaidsgeneHeader= "AIaidsgene";
-    private final String BirdwatchingfromafarHeader= "Birdwatchingfromafar";
-    private final String WhatIsTheDifferenceBetweenHeader= "WhatIsTheDifferenceBetween";
-    private final String KeyBenefitsofAITechnologiesHeader= "KeyBenefitsofAITechnologies";
-    private final String WhyAIGeneratedContentHeader= "WhyAIGeneratedContent";
-    private final String RandomForestTimeSeriesForecastingHeader= "RandomForestTimeSeriesForecasting";
-    private final String AIteachersmustbeeffectiveHeader= "AIteachersmustbeeffective";
-    private final String SpookierOrSaferHeader= "SpookierOrSafer";
-    private final String BusyWeekforGoogleHeader= "BusyWeekforGoogle";
-    private final String FederalGovernmentInvestmentsHeader= "FederalGovernmentInvestments";
-    private final String HowtoDevelopaRandomSubspaceHeader= "HowtoDevelopaRandomSubspace";
-    private final String TrustlevelsinAIHeader= "TrustlevelsinAI";
-    private final String GraphenebasedmemoryresistorsHeader= "Graphenebasedmemoryresistors";
-    private final String ArtificialintelligencemodeldetectsasymptomaticHeader= "Artificialintelligencemodeldetectsasymptomatic";
-    private final String ResiliencyAndSecurityHeader= "Birdwatchingfromafar";
-    private final String AIProjectsProgressingHeader= "AIProjectsProgressing";
-    private final String TestingsewagetohomeHeader= "Testingsewagetohome";
-
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']")
     private WebElement WelcomeMessage;
 
@@ -63,7 +21,6 @@ public class SmartFeedPage extends BaseTest {
 
     @FindBy(xpath = "//input[@id='shortcode-login-submit']")
     private WebElement loginButton;
-
 
     @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]")
     private WebElement iframe;
@@ -86,11 +43,8 @@ public class SmartFeedPage extends BaseTest {
     @FindBy(xpath = "//a[normalize-space()='READ THE FULL ARTICLE HERE']")
     private WebElement Readthefullarticles3 ;
 
-
-
     @FindBy(xpath = "//a[normalize-space()='CLICK HERE TO READ FULL ARTICLE']")
     private WebElement Readthefullarticles4 ;
-
 
     @FindBy(xpath = "//a[contains(text(),'Optimizing Retailer Revenue with Sales Forecasting')]")
     private WebElement OptimizingRetailerRevenue ;
@@ -112,7 +66,6 @@ public class SmartFeedPage extends BaseTest {
 
     @FindBy(xpath = "//a[contains(text(),'Develop an Intuition for How Ensemble Learning Wor')]")
     private WebElement DevelopanIntuition ;
-
 
     @FindBy(xpath = "//a[contains(text(),'Deep learning artificial intelligence keeps an eye')]")
     private WebElement DeeplearningAI ;
@@ -150,7 +103,6 @@ public class SmartFeedPage extends BaseTest {
     @FindBy(xpath = "//a[contains(text(),'Using machine learning to track the pandemic’s imp')]")
     private WebElement Usingmachinelearningtotrack;
 
-
     @FindBy(xpath = "//a[normalize-space()='Curve Fitting With Python']")
     private WebElement CurveFittingWithPython ;
 
@@ -169,18 +121,14 @@ public class SmartFeedPage extends BaseTest {
     @FindBy(xpath = "//a[contains(text(),'What Is The Difference Between Artificial Intellig')]")
     private WebElement WhatIsTheDifferenceBetween ;
 
-
     @FindBy(xpath = "//a[contains(text(),'Key Benefits of AI Technologies and Third-Party Da')]")
     private WebElement KeyBenefitsofAITechnologies ;
-
 
     @FindBy(xpath = "//a[contains(text(),'Why AI-Generated Content Won’t Break the Web?')]")
     private WebElement WhyAIGeneratedContent ;
 
-
     @FindBy(xpath = "//a[normalize-space()='Random Forest for Time Series Forecasting']")
     private WebElement RandomForestTimeSeriesForecasting ;
-
 
     @FindBy(xpath = "//a[contains(text(),'AI teachers must be effective and communicate well')]")
     private WebElement AIteachersmustbeeffective ;
@@ -221,7 +169,6 @@ public class SmartFeedPage extends BaseTest {
     @FindBy(xpath = "//a[contains(text(),'Artificial intelligence can speed up the detection')]")
     private WebElement Artificialintelligencecanspeed ;
 
-    //a[contains(text(),'Artificial intelligence can speed up the detection')]
     public SmartFeedPage(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 30);

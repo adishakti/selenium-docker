@@ -11,16 +11,6 @@ import ai.generic.BaseTest;
 
 public class DIYPage extends BaseTest {
 
-    private String SmartCameraHeader= "Smart Camera";
-    private String OverviewHeader= "Overview";
-    private String ApproachHeader= "Approach";
-    private String PCHeader= "Project Creation";
-    private String UsingSDKsHeader= "Using SDKs";
-    private String ConnecttoDLTKHeader= "Connect to DLTK";
-    private String SummaryHeader= "Summary";
-    private String ReviewInspectorHeader= "Review Inspector";
-
-
     @FindBy(xpath = "//h2[text()='The Unified Open Source Deep Learning Platform']")
     private WebElement WelcomeMessage;
 
@@ -32,7 +22,6 @@ public class DIYPage extends BaseTest {
 
     @FindBy(xpath = "//input[@id='shortcode-login-submit']")
     private WebElement loginButton;
-
 
     @FindBy(xpath = "//iframe[contains(@data-testid, 'dialog_iframe')]")
     private WebElement iframe;
